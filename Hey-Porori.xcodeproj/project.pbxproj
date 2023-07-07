@@ -11,6 +11,8 @@
 		0E7132812A47E7CA0003306C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7132802A47E7CA0003306C /* ContentView.swift */; };
 		0E7132832A47E7CB0003306C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E7132822A47E7CB0003306C /* Assets.xcassets */; };
 		0E7132862A47E7CB0003306C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E7132852A47E7CB0003306C /* Preview Assets.xcassets */; };
+		0EE95D742A605940005B9E16 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 0EE95D732A605940005B9E16 /* .swiftlint.yml */; };
+		0EE95D762A60597D005B9E16 /* .pre-commit-config.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 0EE95D752A60597D005B9E16 /* .pre-commit-config.yaml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		0E7132852A47E7CB0003306C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0E71328B2A47E7CC0003306C /* Hey-PororiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hey-PororiTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E7132952A47E7CC0003306C /* Hey-PororiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hey-PororiUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EE95D732A605940005B9E16 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		0EE95D752A60597D005B9E16 /* .pre-commit-config.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = ".pre-commit-config.yaml"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,8 @@
 		0E7132722A47E7CA0003306C = {
 			isa = PBXGroup;
 			children = (
+				0EE95D752A60597D005B9E16 /* .pre-commit-config.yaml */,
+				0EE95D732A605940005B9E16 /* .swiftlint.yml */,
 				0E71327D2A47E7CA0003306C /* Hey-Porori */,
 				0E71327C2A47E7CA0003306C /* Products */,
 			);
@@ -112,6 +118,7 @@
 				0E7132772A47E7CA0003306C /* Sources */,
 				0E7132782A47E7CA0003306C /* Frameworks */,
 				0E7132792A47E7CA0003306C /* Resources */,
+				0EE95D722A6058CA005B9E16 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -206,7 +213,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EE95D742A605940005B9E16 /* .swiftlint.yml in Resources */,
 				0E7132862A47E7CB0003306C /* Preview Assets.xcassets in Resources */,
+				0EE95D762A60597D005B9E16 /* .pre-commit-config.yaml in Resources */,
 				0E7132832A47E7CB0003306C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -226,6 +235,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0EE95D722A6058CA005B9E16 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0E7132772A47E7CA0003306C /* Sources */ = {
