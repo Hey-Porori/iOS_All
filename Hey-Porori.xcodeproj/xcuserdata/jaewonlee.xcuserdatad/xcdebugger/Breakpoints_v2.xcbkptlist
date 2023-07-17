@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "6A658A99-350C-449D-938E-06CCA15D9667"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C0E8969D-F996-465D-A2F4-C15983332781"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hey-Porori/Constants/Colors.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "Color"
+            landmarkType = "21">
+            <Locations>
+               <Location
+                  uuid = "C0E8969D-F996-465D-A2F4-C15983332781 - 7114789f8daf2220"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "one-time initialization function for darkGray"
+                  moduleName = "Hey-Porori"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaewonlee/Desktop/Hey-Porori/Hey-Porori/Constants/Colors.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "C0E8969D-F996-465D-A2F4-C15983332781 - d5223a798ab7d25e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftUI.Color.darkGray.unsafeMutableAddressor : SwiftUI.Color"
+                  moduleName = "Hey-Porori"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaewonlee/Desktop/Hey-Porori/Hey-Porori/Constants/Colors.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -35,7 +35,7 @@ struct CommunityMainView: View {
             case .mapView:
                 CommunityMapView()
             case .hotPost:
-                Text("인기 게시글")
+                CommunityHotPostView()
             case .myPost:
                 Text("MY 게시글")
             }
