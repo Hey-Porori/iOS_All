@@ -13,42 +13,55 @@ enum FloatingButtonOption {
 }
 
 struct CommunityMapView: View {
+    @State private var createPostViewIsPresented = false
     @State private var searchText = ""
     
     var body: some View {
-        VStack {
-            // MARK: 커뮤니티 맵 뷰 검색 바
-            HStack {
-                TextField("게시글 제목, 내용, 태그, 닉네임으로 검색", text: $searchText)
-                    .font(.system(size: 14))
-                    .padding(.leading, 10)
-                    .padding(.vertical, 8)
-                Image(systemName: "magnifyingglass")
-                    .foregroundColor(.lightGray)
-                    .font(.system(size: 24))
-                    .padding(5)
-            }.background {
-                RoundedRectangle(cornerRadius: 10)
-                    .fill(Color.white)
-                    .shadow(color: .shadowGray, radius: 2, y: 2)
-            }
-            .padding(.horizontal, 22)
-            
-            Spacer()
-            
-            HStack {
+        NavigationStack {
+            VStack {
+                // MARK: 커뮤니티 맵 뷰 검색 바
+                HStack {
+                    TextField("게시글 제목, 내용, 태그, 닉네임으로 검색", text: $searchText)
+                        .font(.system(size: 14))
+                        .padding(.leading, 10)
+                        .padding(.vertical, 8)
+                    Image(systemName: "magnifyingglass")
+                        .foregroundColor(.lightGray)
+                        .font(.system(size: 24))
+                        .padding(5)
+                }.background {
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(Color.white)
+                        .shadow(color: .shadowGray, radius: 2, y: 2)
+                }
+                .padding(.horizontal, 22)
+                
                 Spacer()
-                VStack {
-                    floatingButton(buttonOption: .bookmark)
-                    floatingButton(buttonOption: .write)
-                }.padding(.trailing, 10)
-            }.padding(.bottom, 20)
+                
+                HStack {
+                    Spacer()
+                    VStack {
+                        floatingButton(buttonOption: .bookmark)
+                        floatingButton(buttonOption: .write)
+//                            .navigationDestination(isPresented: $createPostViewIsPresented) {
+//                                CommunityCreatePostView()
+//                            }
+                    }.padding(.trailing, 10)
+                }.padding(.bottom, 20)
+            }
+        }.fullScreenCover(isPresented: $createPostViewIsPresented) {
+            CommunityCreatePostView(createPostViewIsPresented: $createPostViewIsPresented)
         }
     }
     
     private func floatingButton(buttonOption: FloatingButtonOption) -> some View {
         return Button {
-            
+            switch buttonOption {
+            case .bookmark:
+                break
+            case .write:
+                createPostViewIsPresented = true
+            }
         } label: {
             switch buttonOption {
             case .bookmark:

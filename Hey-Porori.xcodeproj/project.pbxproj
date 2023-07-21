@@ -12,6 +12,8 @@
 		0E6AE2872A62DAEE008ADD83 /* CommunityMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6AE2862A62DAEE008ADD83 /* CommunityMainView.swift */; };
 		0E6AE28B2A63CB0C008ADD83 /* CommunityMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6AE28A2A63CB0C008ADD83 /* CommunityMapView.swift */; };
 		0E6AE28D2A63D53B008ADD83 /* CommunityHotPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6AE28C2A63D53B008ADD83 /* CommunityHotPostView.swift */; };
+		0E6AE28F2A6ABB7B008ADD83 /* CommunityMyPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6AE28E2A6ABB7B008ADD83 /* CommunityMyPostView.swift */; };
+		0E6AE2932A6ABE00008ADD83 /* CommunityCreatePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6AE2922A6ABE00008ADD83 /* CommunityCreatePostView.swift */; };
 		0E71327F2A47E7CA0003306C /* Hey_PororiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71327E2A47E7CA0003306C /* Hey_PororiApp.swift */; };
 		0E7132832A47E7CB0003306C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E7132822A47E7CB0003306C /* Assets.xcassets */; };
 		0E7132862A47E7CB0003306C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E7132852A47E7CB0003306C /* Preview Assets.xcassets */; };
@@ -42,6 +44,8 @@
 		0E6AE2862A62DAEE008ADD83 /* CommunityMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityMainView.swift; sourceTree = "<group>"; };
 		0E6AE28A2A63CB0C008ADD83 /* CommunityMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityMapView.swift; sourceTree = "<group>"; };
 		0E6AE28C2A63D53B008ADD83 /* CommunityHotPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityHotPostView.swift; sourceTree = "<group>"; };
+		0E6AE28E2A6ABB7B008ADD83 /* CommunityMyPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityMyPostView.swift; sourceTree = "<group>"; };
+		0E6AE2922A6ABE00008ADD83 /* CommunityCreatePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityCreatePostView.swift; sourceTree = "<group>"; };
 		0E71327B2A47E7CA0003306C /* Hey-Porori.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hey-Porori.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E71327E2A47E7CA0003306C /* Hey_PororiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hey_PororiApp.swift; sourceTree = "<group>"; };
 		0E7132822A47E7CB0003306C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 				0E6AE2862A62DAEE008ADD83 /* CommunityMainView.swift */,
 				0E6AE28A2A63CB0C008ADD83 /* CommunityMapView.swift */,
 				0E6AE28C2A63D53B008ADD83 /* CommunityHotPostView.swift */,
+				0E6AE28E2A6ABB7B008ADD83 /* CommunityMyPostView.swift */,
+				0E6AE2922A6ABE00008ADD83 /* CommunityCreatePostView.swift */,
 			);
 			path = Community;
 			sourceTree = "<group>";
@@ -292,9 +298,11 @@
 			files = (
 				0E6AE2822A62D6BE008ADD83 /* Colors.swift in Sources */,
 				0E6AE2852A62D957008ADD83 /* MainTabView.swift in Sources */,
+				0E6AE2932A6ABE00008ADD83 /* CommunityCreatePostView.swift in Sources */,
 				0E6AE28B2A63CB0C008ADD83 /* CommunityMapView.swift in Sources */,
 				0E71327F2A47E7CA0003306C /* Hey_PororiApp.swift in Sources */,
 				0E6AE28D2A63D53B008ADD83 /* CommunityHotPostView.swift in Sources */,
+				0E6AE28F2A6ABB7B008ADD83 /* CommunityMyPostView.swift in Sources */,
 				0E6AE2872A62DAEE008ADD83 /* CommunityMainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
