@@ -37,8 +37,23 @@ extension Text {
             .font(.system(size: size.rawValue, weight: .bold))
     }
     
-    func defaultStyle_custom(size: TextSize = .size13, weight: Font.Weight = .regular) -> some View {
+    func defaultStyle_customWeight(size: TextSize = .size13, weight: Font.Weight = .regular) -> some View {
         self.foregroundColor(.darkGray)
+            .font(.system(size: size.rawValue, weight: weight))
+    }
+    
+    func customStyle(size: TextSize = .size13, color: Color) -> some View {
+        self.foregroundColor(color)
+            .font(.system(size: size.rawValue))
+    }
+    
+    func customStyle_Bold(size: TextSize = .size13, color: Color) -> some View {
+        self.foregroundColor(color)
+            .font(.system(size: size.rawValue, weight: .bold))
+    }
+    
+    func customStyle(size: TextSize = .size13, color: Color, weight: Font.Weight = .regular) -> some View {
+        self.foregroundColor(color)
             .font(.system(size: size.rawValue, weight: weight))
     }
 }
