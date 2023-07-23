@@ -34,8 +34,22 @@ struct CommunityCreatePostView: View {
                 }
             }.padding(.horizontal, 13).padding(.top, 5)
             
-            Spacer()
+            Spacer().frame(height: 20)
             
-        }
+            // MARK: Location
+            HStack {
+                Image(systemName: "location.fill")
+                    .foregroundColor(.darkBlue)
+                    .font(Font(.size19))
+                Text("중구 필동로 1길 30")
+                    .foregroundColor(.darkGray)
+                    .defaultStyle_Bold(size: .size15)
+                Image(systemName: "arrow.counterclockwise")
+                    .foregroundColor(.darkGray)
+                    .font(Font(.size19, weight: .bold))
+            }
+            
+            Spacer()
+        }.background(Color.subSkyBlue005)
     }
 }

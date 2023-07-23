@@ -14,6 +14,7 @@ extension Color {
     
     // MARK: Sub Colors
     static let subSkyBlue = Color(hex: "#87CEFA")
+    static let subSkyBlue005 = Color(hex: "#87CEFA").opacity(0.05)
     static let darkBlue = Color(hex: "#6094DA")
     
     // MARK: Gray Colors

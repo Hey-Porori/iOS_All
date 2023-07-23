@@ -22,17 +22,17 @@ struct CommunityMapView: View {
                 // MARK: 커뮤니티 맵 뷰 검색 바
                 HStack {
                     TextField("게시글 제목, 내용, 태그, 닉네임으로 검색", text: $searchText)
-                        .font(.system(size: 14))
+                        .font(Font(.size14))
                         .padding(.leading, 10)
                         .padding(.vertical, 8)
                     Image(systemName: "magnifyingglass")
                         .foregroundColor(.lightGray)
-                        .font(.system(size: 24))
+                        .font(Font(.size24))
                         .padding(5)
                 }.background {
                     RoundedRectangle(cornerRadius: 10)
                         .fill(Color.white)
-                        .shadow(color: .shadowGray, radius: 2, y: 2)
+                        .defaultShadow()
                 }
                 .padding(.horizontal, 22)
                 
@@ -66,18 +66,18 @@ struct CommunityMapView: View {
             switch buttonOption {
             case .bookmark:
                 Image(systemName: "bookmark.fill")
-                    .font(.system(size: 25))
+                    .font(Font(.size25))
                     .padding(15)
                     .background(Color.lightYellow)
             case .write:
                 Image(systemName: "pencil")
-                    .font(.system(size: 27))
+                    .font(Font(.size27))
                     .padding(13)
                     .background(Color.darkBlue)
                     .clipShape(Circle())
             }
         }.foregroundColor(.white)
             .clipShape(Circle())
-            .shadow(color: .shadowGray, radius: 2, y: 2)
+            .defaultShadow()
     }
 }
