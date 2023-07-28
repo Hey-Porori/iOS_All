@@ -85,6 +85,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E2220FB2A742740008083BD /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		0E6AE2802A62D6AC008ADD83 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +135,7 @@
 		0E71327D2A47E7CA0003306C /* Hey-Porori */ = {
 			isa = PBXGroup;
 			children = (
+				0E2220FB2A742740008083BD /* New Group */,
 				0EBE7D5F2A7C9BF200ACE2A1 /* Extensions */,
 				0E6AE2832A62D8E2008ADD83 /* Community */,
 				0E6AE2802A62D6AC008ADD83 /* Constants */,
