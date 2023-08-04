@@ -10,15 +10,14 @@ import SwiftUI
 struct MainTabView: View {
     var body: some View {
         TabView {
-            CommunityMainView()
+            JobMainView()
                 .tabItem {
-                    Label("사용자", systemImage: "person")
+                    Label("알바", systemImage: "person")
                 }
             CommunityMainView()
                 .tabItem {
-                    Label("사용자", systemImage: "person")
+                    Label("커뮤니티", systemImage: "person")
                 }
-            
             CommunityMainView()
                 .tabItem {
                     Label("사용자", systemImage: "person")

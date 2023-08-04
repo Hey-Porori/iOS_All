@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E2220FD2A7D6F51008083BD /* JobMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2220FC2A7D6F51008083BD /* JobMainView.swift */; };
+		0E2220FF2A7D7C98008083BD /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2220FE2A7D7C98008083BD /* Components.swift */; };
 		0E25D10D2A6D41F600EF45B1 /* DesignModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E25D10C2A6D41F600EF45B1 /* DesignModifier.swift */; };
 		0E6AE2822A62D6BE008ADD83 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6AE2812A62D6BE008ADD83 /* Colors.swift */; };
 		0E6AE2852A62D957008ADD83 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6AE2842A62D957008ADD83 /* MainTabView.swift */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E2220FC2A7D6F51008083BD /* JobMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobMainView.swift; sourceTree = "<group>"; };
+		0E2220FE2A7D7C98008083BD /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
 		0E25D10C2A6D41F600EF45B1 /* DesignModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignModifier.swift; sourceTree = "<group>"; };
 		0E6AE2812A62D6BE008ADD83 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		0E6AE2842A62D957008ADD83 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
@@ -85,11 +89,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0E2220FB2A742740008083BD /* New Group */ = {
+		0E2220FB2A742740008083BD /* Job */ = {
 			isa = PBXGroup;
 			children = (
+				0E2220FC2A7D6F51008083BD /* JobMainView.swift */,
 			);
-			path = "New Group";
+			path = Job;
 			sourceTree = "<group>";
 		};
 		0E6AE2802A62D6AC008ADD83 /* Constants */ = {
@@ -135,11 +140,12 @@
 		0E71327D2A47E7CA0003306C /* Hey-Porori */ = {
 			isa = PBXGroup;
 			children = (
-				0E2220FB2A742740008083BD /* New Group */,
 				0EBE7D5F2A7C9BF200ACE2A1 /* Extensions */,
+				0E2220FB2A742740008083BD /* Job */,
 				0E6AE2832A62D8E2008ADD83 /* Community */,
 				0E6AE2802A62D6AC008ADD83 /* Constants */,
 				0E6AE2842A62D957008ADD83 /* MainTabView.swift */,
+				0E2220FE2A7D7C98008083BD /* Components.swift */,
 				0E71327E2A47E7CA0003306C /* Hey_PororiApp.swift */,
 				0E7132822A47E7CB0003306C /* Assets.xcassets */,
 				0E7132842A47E7CB0003306C /* Preview Content */,
@@ -319,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E6AE2822A62D6BE008ADD83 /* Colors.swift in Sources */,
+				0E2220FF2A7D7C98008083BD /* Components.swift in Sources */,
 				0EBE7D612A7C9C0000ACE2A1 /* TextExtension.swift in Sources */,
 				0E6AE2852A62D957008ADD83 /* MainTabView.swift in Sources */,
 				0E6AE2932A6ABE00008ADD83 /* CommunityCreatePostView.swift in Sources */,
@@ -326,6 +333,7 @@
 				0E6AE28B2A63CB0C008ADD83 /* CommunityMapView.swift in Sources */,
 				0E71327F2A47E7CA0003306C /* Hey_PororiApp.swift in Sources */,
 				0E6AE28D2A63D53B008ADD83 /* CommunityHotPostView.swift in Sources */,
+				0E2220FD2A7D6F51008083BD /* JobMainView.swift in Sources */,
 				0E6AE28F2A6ABB7B008ADD83 /* CommunityMyPostView.swift in Sources */,
 				0E6AE2872A62DAEE008ADD83 /* CommunityMainView.swift in Sources */,
 			);

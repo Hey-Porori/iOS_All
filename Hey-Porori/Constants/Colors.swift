@@ -18,6 +18,7 @@ extension Color {
     static let darkBlue = Color(hex: "#6094DA")
     
     // MARK: Gray Colors
+    static let black = Color(hex: "#353535")
     static let darkGray = Color(hex: "#666666")
     static let gray = Color(hex: "#999999")
     static let lightGray = Color(hex: "#CCCCCC")
