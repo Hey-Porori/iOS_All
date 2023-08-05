@@ -37,7 +37,17 @@ struct JobMainView: View {
             SearchTextBox(placeholder: "제목 등으로 검색하세요", searchText: $searchText)
 
             // MARK: Filter with Tag
-            
+            HStack {
+                Image(systemName: "slider.horizontal.3").font(Font(.size23))
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack {
+                        filterBox(content: "창곡동 외 7건")
+                        filterBox(content: "기간")
+                        filterBox(content: "하는 일")
+                        filterBox(content: "요일")
+                    }
+                }
+            }.padding(.top, 5)
             
             ScrollView {
                 jobPostRow(postData: dummy)
@@ -49,7 +59,7 @@ struct JobMainView: View {
         }.padding(.horizontal, 24)
     }
     
-    func jobPostRow(postData: JobPostData) -> some View {
+    private func jobPostRow(postData: JobPostData) -> some View {
         return HStack {
             VStack(alignment: .leading) {
                 Text(postData.title).defaultStyle_Bold(size: .size17)
@@ -62,5 +72,15 @@ struct JobMainView: View {
             Spacer()
             Image(systemName: "chevron.forward").font(Font(.size18))
         }.frame(maxHeight: 95).padding(15)
+    }
+    
+    private func filterBox(content: String) -> some View {
+        return HStack {
+            Text("\(content)").customStyle_Bold(size: .size14, color: .white).padding(.trailing, -3).lineLimit(1)
+            Image(systemName: "chevron.down").font(Font(.size14, weight: .bold)).foregroundColor(.white)
+        }.padding(5).padding(.horizontal, 5).background {
+            RoundedRectangle(cornerRadius: 7)
+                .fill(Color.darkBlue)
+        }
     }
 }

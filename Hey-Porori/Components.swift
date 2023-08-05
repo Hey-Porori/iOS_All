@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct SearchTextBox: View {
     let placeholder: String
     @Binding var searchText: String
@@ -29,4 +28,3 @@ struct SearchTextBox: View {
         }
     }
 }
-
