@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0E25D10D2A6D41F600EF45B1 /* DesignModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E25D10C2A6D41F600EF45B1 /* DesignModifier.swift */; };
+		0E439CDD2A7FF7D800EA7CA5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E439CDC2A7FF7D800EA7CA5 /* LoginView.swift */; };
 		0E6AE2822A62D6BE008ADD83 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6AE2812A62D6BE008ADD83 /* Colors.swift */; };
 		0E6AE2852A62D957008ADD83 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6AE2842A62D957008ADD83 /* MainTabView.swift */; };
 		0E6AE2872A62DAEE008ADD83 /* CommunityMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6AE2862A62DAEE008ADD83 /* CommunityMainView.swift */; };
@@ -42,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		0E25D10C2A6D41F600EF45B1 /* DesignModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignModifier.swift; sourceTree = "<group>"; };
+		0E439CDC2A7FF7D800EA7CA5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		0E439CDE2A7FF7D800EA7CA5 /* Hey-Porori.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Hey-Porori.entitlements"; sourceTree = "<group>"; };
 		0E6AE2812A62D6BE008ADD83 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		0E6AE2842A62D957008ADD83 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		0E6AE2862A62DAEE008ADD83 /* CommunityMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityMainView.swift; sourceTree = "<group>"; };
@@ -135,10 +138,12 @@
 		0E71327D2A47E7CA0003306C /* Hey-Porori */ = {
 			isa = PBXGroup;
 			children = (
+				0E439CDE2A7FF7D800EA7CA5 /* Hey-Porori.entitlements */,
 				0E2220FB2A742740008083BD /* New Group */,
 				0EBE7D5F2A7C9BF200ACE2A1 /* Extensions */,
 				0E6AE2832A62D8E2008ADD83 /* Community */,
 				0E6AE2802A62D6AC008ADD83 /* Constants */,
+				0E439CDC2A7FF7D800EA7CA5 /* LoginView.swift */,
 				0E6AE2842A62D957008ADD83 /* MainTabView.swift */,
 				0E71327E2A47E7CA0003306C /* Hey_PororiApp.swift */,
 				0E7132822A47E7CB0003306C /* Assets.xcassets */,
@@ -326,6 +331,7 @@
 				0E6AE28B2A63CB0C008ADD83 /* CommunityMapView.swift in Sources */,
 				0E71327F2A47E7CA0003306C /* Hey_PororiApp.swift in Sources */,
 				0E6AE28D2A63D53B008ADD83 /* CommunityHotPostView.swift in Sources */,
+				0E439CDD2A7FF7D800EA7CA5 /* LoginView.swift in Sources */,
 				0E6AE28F2A6ABB7B008ADD83 /* CommunityMyPostView.swift in Sources */,
 				0E6AE2872A62DAEE008ADD83 /* CommunityMainView.swift in Sources */,
 			);
@@ -480,6 +486,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Hey-Porori/Hey-Porori.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Hey-Porori/Preview Content\"";
@@ -509,6 +516,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Hey-Porori/Hey-Porori.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Hey-Porori/Preview Content\"";
