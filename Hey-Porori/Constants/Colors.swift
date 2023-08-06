@@ -24,6 +24,7 @@ extension Color {
     static let lightGray = Color(hex: "#CCCCCC")
     
     static let shadowGray = Color(.black).opacity(0.25)
+    static let dividerGray = Color(hex: "#D9D9D9")
     
     // MARK: Other Colors
     static let lightYellow = Color(hex: "#FFD976")

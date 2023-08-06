@@ -17,6 +17,7 @@
 		0E6AE28D2A63D53B008ADD83 /* CommunityHotPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6AE28C2A63D53B008ADD83 /* CommunityHotPostView.swift */; };
 		0E6AE28F2A6ABB7B008ADD83 /* CommunityMyPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6AE28E2A6ABB7B008ADD83 /* CommunityMyPostView.swift */; };
 		0E6AE2932A6ABE00008ADD83 /* CommunityCreatePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6AE2922A6ABE00008ADD83 /* CommunityCreatePostView.swift */; };
+		0E6DE2F42A7E1C52003B746D /* JobPostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6DE2F32A7E1C52003B746D /* JobPostDetailView.swift */; };
 		0E71327F2A47E7CA0003306C /* Hey_PororiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71327E2A47E7CA0003306C /* Hey_PororiApp.swift */; };
 		0E7132832A47E7CB0003306C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E7132822A47E7CB0003306C /* Assets.xcassets */; };
 		0E7132862A47E7CB0003306C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E7132852A47E7CB0003306C /* Preview Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		0E6AE28C2A63D53B008ADD83 /* CommunityHotPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityHotPostView.swift; sourceTree = "<group>"; };
 		0E6AE28E2A6ABB7B008ADD83 /* CommunityMyPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityMyPostView.swift; sourceTree = "<group>"; };
 		0E6AE2922A6ABE00008ADD83 /* CommunityCreatePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityCreatePostView.swift; sourceTree = "<group>"; };
+		0E6DE2F32A7E1C52003B746D /* JobPostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobPostDetailView.swift; sourceTree = "<group>"; };
 		0E71327B2A47E7CA0003306C /* Hey-Porori.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hey-Porori.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E71327E2A47E7CA0003306C /* Hey_PororiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hey_PororiApp.swift; sourceTree = "<group>"; };
 		0E7132822A47E7CB0003306C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				0E2220FC2A7D6F51008083BD /* JobMainView.swift */,
+				0E6DE2F32A7E1C52003B746D /* JobPostDetailView.swift */,
 			);
 			path = Job;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				0E25D10D2A6D41F600EF45B1 /* DesignModifier.swift in Sources */,
 				0E6AE28B2A63CB0C008ADD83 /* CommunityMapView.swift in Sources */,
 				0E71327F2A47E7CA0003306C /* Hey_PororiApp.swift in Sources */,
+				0E6DE2F42A7E1C52003B746D /* JobPostDetailView.swift in Sources */,
 				0E6AE28D2A63D53B008ADD83 /* CommunityHotPostView.swift in Sources */,
 				0E2220FD2A7D6F51008083BD /* JobMainView.swift in Sources */,
 				0E6AE28F2A6ABB7B008ADD83 /* CommunityMyPostView.swift in Sources */,
