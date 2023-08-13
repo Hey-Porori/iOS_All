@@ -4,6 +4,9 @@
 .AppleDouble
 .LSOverride
 
+APIURL.plist
+*.xcconfig
+
 # Icon must end with two
 Icon
 
