@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0E25D10D2A6D41F600EF45B1 /* DesignModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E25D10C2A6D41F600EF45B1 /* DesignModifier.swift */; };
 		0E26AE792A87792600874903 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0E26AE782A87792600874903 /* Alamofire */; };
+		0E26AE7C2A87D2BD00874903 /* UserAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E26AE7B2A87D2BD00874903 /* UserAPIManager.swift */; };
 		0E439CDD2A7FF7D800EA7CA5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E439CDC2A7FF7D800EA7CA5 /* LoginView.swift */; };
 		0E6AE2822A62D6BE008ADD83 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6AE2812A62D6BE008ADD83 /* Colors.swift */; };
 		0E6AE2852A62D957008ADD83 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6AE2842A62D957008ADD83 /* MainTabView.swift */; };
@@ -23,6 +24,8 @@
 		0EBE7D612A7C9C0000ACE2A1 /* TextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBE7D602A7C9C0000ACE2A1 /* TextExtension.swift */; };
 		0EE95D742A605940005B9E16 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 0EE95D732A605940005B9E16 /* .swiftlint.yml */; };
 		0EE95D762A60597D005B9E16 /* .pre-commit-config.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 0EE95D752A60597D005B9E16 /* .pre-commit-config.yaml */; };
+		0EEA36F12A88A9E90034C024 /* APIURL.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0EEA36F02A88A9E90034C024 /* APIURL.plist */; };
+		0EEA36F32A88AE890034C024 /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEA36F22A88AE890034C024 /* BundleExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		0E25D10C2A6D41F600EF45B1 /* DesignModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignModifier.swift; sourceTree = "<group>"; };
+		0E26AE7B2A87D2BD00874903 /* UserAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPIManager.swift; sourceTree = "<group>"; };
 		0E439CDC2A7FF7D800EA7CA5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		0E439CDE2A7FF7D800EA7CA5 /* Hey-Porori.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Hey-Porori.entitlements"; sourceTree = "<group>"; };
 		0E6AE2812A62D6BE008ADD83 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -62,6 +66,8 @@
 		0EBE7D602A7C9C0000ACE2A1 /* TextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExtension.swift; sourceTree = "<group>"; };
 		0EE95D732A605940005B9E16 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		0EE95D752A60597D005B9E16 /* .pre-commit-config.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = ".pre-commit-config.yaml"; sourceTree = "<group>"; };
+		0EEA36F02A88A9E90034C024 /* APIURL.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIURL.plist; sourceTree = "<group>"; };
+		0EEA36F22A88AE890034C024 /* BundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,15 @@
 			children = (
 			);
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		0E26AE7A2A87D29100874903 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				0E26AE7B2A87D2BD00874903 /* UserAPIManager.swift */,
+				0EEA36F02A88A9E90034C024 /* APIURL.plist */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		0E6AE2802A62D6AC008ADD83 /* Constants */ = {
@@ -140,6 +155,7 @@
 		0E71327D2A47E7CA0003306C /* Hey-Porori */ = {
 			isa = PBXGroup;
 			children = (
+				0E26AE7A2A87D29100874903 /* API */,
 				0E439CDE2A7FF7D800EA7CA5 /* Hey-Porori.entitlements */,
 				0E2220FB2A742740008083BD /* New Group */,
 				0EBE7D5F2A7C9BF200ACE2A1 /* Extensions */,
@@ -167,6 +183,7 @@
 			children = (
 				0EBE7D602A7C9C0000ACE2A1 /* TextExtension.swift */,
 				0E25D10C2A6D41F600EF45B1 /* DesignModifier.swift */,
+				0EEA36F22A88AE890034C024 /* BundleExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -286,6 +303,7 @@
 				0E7132862A47E7CB0003306C /* Preview Assets.xcassets in Resources */,
 				0EE95D762A60597D005B9E16 /* .pre-commit-config.yaml in Resources */,
 				0E7132832A47E7CB0003306C /* Assets.xcassets in Resources */,
+				0EEA36F12A88A9E90034C024 /* APIURL.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,7 +351,9 @@
 			files = (
 				0E6AE2822A62D6BE008ADD83 /* Colors.swift in Sources */,
 				0EBE7D612A7C9C0000ACE2A1 /* TextExtension.swift in Sources */,
+				0EEA36F32A88AE890034C024 /* BundleExtension.swift in Sources */,
 				0E6AE2852A62D957008ADD83 /* MainTabView.swift in Sources */,
+				0E26AE7C2A87D2BD00874903 /* UserAPIManager.swift in Sources */,
 				0E6AE2932A6ABE00008ADD83 /* CommunityCreatePostView.swift in Sources */,
 				0E25D10D2A6D41F600EF45B1 /* DesignModifier.swift in Sources */,
 				0E6AE28B2A63CB0C008ADD83 /* CommunityMapView.swift in Sources */,

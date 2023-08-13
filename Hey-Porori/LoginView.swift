@@ -33,7 +33,7 @@ struct LoginView: View {
                         let email = appleIDCredential.email
                         let identityToken = String(data: appleIDCredential.identityToken!, encoding: .utf8)
                         let authorizationCode = String(data: appleIDCredential.authorizationCode!, encoding: .utf8)
-                    print("identityToken :: \(identityToken!)")
+                    UserAPIManager.shared.signInWithApple(token: identityToken!)
                 default:
                     break
                 }

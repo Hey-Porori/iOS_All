@@ -4,6 +4,8 @@
 .AppleDouble
 .LSOverride
 
+APIURL.plist
+
 # Icon must end with two
 Icon
 
@@ -53,6 +55,7 @@ DerivedData/
 
 ### Xcode Patch ###
 *.xcodeproj/*
+*.xcconfig
 !*.xcodeproj/project.pbxproj
 !*.xcodeproj/xcshareddata/
 !*.xcworkspace/contents.xcworkspacedata
