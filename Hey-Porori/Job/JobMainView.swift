@@ -31,6 +31,7 @@ struct JobMainView: View {
     
     @State private var dummyShown: JobPostData?
     @State var searchText = ""
+    @State var isPresentJobCreatePostView = false
     
     var body: some View {
         NavigationStack {
@@ -42,7 +43,15 @@ struct JobMainView: View {
                     Spacer()
                     Image(systemName: "bell").font(Font(.size22))
                     Image(systemName: "person").font(Font(.size22))
-                    Image(systemName: "highlighter").font(Font(.size22))
+                    Button {
+                        isPresentJobCreatePostView = true
+                    } label: {
+                        Image(systemName: "highlighter")
+                            .font(Font(.size22))
+                            .foregroundColor(.black)
+                    }.navigationDestination(isPresented: $isPresentJobCreatePostView) {
+                        JobCreatePostView(isPresentJobCreatePostView: $isPresentJobCreatePostView)
+                    }
                 }
                 
                 // MARK: Search Bar

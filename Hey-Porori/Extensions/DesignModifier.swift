@@ -24,7 +24,7 @@ extension View {
 }
 
 extension TextField {
-    func defaultBackground() -> some View {
+    func defaultBackground_Shadow() -> some View {
         self.padding(.horizontal, 17)
             .padding(.vertical, 20)
             .background {
@@ -34,7 +34,7 @@ extension TextField {
             }
     }
     
-    func customBackground(HPad: CGFloat = 17, VPad: CGFloat = 20, minHeight: CGFloat = 100) -> some View {
+    func customBackground_Shadow(HPad: CGFloat = 17, VPad: CGFloat = 20, minHeight: CGFloat = 100) -> some View {
         self.padding(.horizontal, HPad)
             .padding(.vertical, VPad)
             .frame(minHeight: minHeight)
@@ -43,6 +43,20 @@ extension TextField {
                     .fill(Color.white)
                     .defaultShadow()
             }
+    }
+    
+    func jobDefaultBackGround() -> some View {
+        self.padding(.horizontal, 16)
+            .padding(.vertical, 11)
+            .background(
+                RoundedRectangle(cornerRadius: 5)
+                    .fill(Color.white)
+            ).overlay(
+                RoundedRectangle(cornerRadius: 5)
+                .inset(by: 1)
+                .stroke(Color.dividerGray, lineWidth: 2)
+            )
+            
     }
 }
 

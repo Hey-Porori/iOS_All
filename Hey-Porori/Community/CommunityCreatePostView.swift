@@ -50,7 +50,7 @@ struct CommunityCreatePostView: View {
                     }.padding(.leading, 3)
                     
                     TextField("제목을 입력하세요", text: $titleText)
-                        .defaultBackground()
+                        .defaultBackground_Shadow()
                         .font(Font(.size18, weight: .bold))
                 }.padding(.bottom, 25)
                 
