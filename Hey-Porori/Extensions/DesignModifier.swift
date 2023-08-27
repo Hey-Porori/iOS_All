@@ -21,6 +21,16 @@ extension View {
                     .defaultShadow()
             }
     }
+    
+    func jobToggleBackground() -> some View {
+        self.padding(.vertical, 4)
+        .padding(.horizontal, 7)
+        .overlay(
+            RoundedRectangle(cornerRadius: 5)
+                .inset(by: 0.5)
+                .stroke(Color.dividerGray, lineWidth: 1)
+        )
+    }
 }
 
 extension TextField {
