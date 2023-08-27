@@ -71,7 +71,7 @@ struct JobPostDetailView: View {
                             Text("일품양 | 14분 전").defaultGrayStyle(size: .size17)
                         }
                         Spacer()
-                        Image(systemName: "bookmark").font(Font(.size27))
+                        Image(systemName: "highlighter").font(Font(.size27))
                     }
                     Divider().frame(height: 1.5)
                         .foregroundColor(.dividerGray).padding(.vertical, 20)

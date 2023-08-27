@@ -83,10 +83,10 @@ struct JobMainView: View {
                     .defaultStyle(size: .size15)
                 Spacer()
                 Text("시급 \(postData.payPerTime)원").defaultGrayStyle(size: .size15)
-                Text("\(postData.workTime)").defaultStyle(size: .size15)
+                Text("\(postData.workTime)").defaultGrayStyle(size: .size15)
             }
             Spacer()
-            Image(systemName: "chevron.forward").font(Font(.size18))
+            Image(systemName: "chevron.forward").font(Font(.size18)).foregroundColor(.darkGray)
         }.frame(maxHeight: 95).padding(.top, 20)
     }
     
