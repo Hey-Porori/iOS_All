@@ -28,6 +28,7 @@ extension Color {
     
     // MARK: Other Colors
     static let lightYellow = Color(hex: "#FFD976")
+    static let lightOrange = Color(hex: "#FF722D")
 }
  
 extension Color {
