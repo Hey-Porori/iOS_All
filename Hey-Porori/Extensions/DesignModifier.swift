@@ -31,6 +31,19 @@ extension View {
                 .stroke(isSelected ? .black : .dividerGray, lineWidth: 1)
         )
     }
+    
+    func jobTextFieldCustomBackGround(HPad: CGFloat = 16, VPad: CGFloat = 11, strokeColor: Color = .dividerGray, lineWidth: CGFloat = 2) -> some View {
+        self.padding(.horizontal, HPad)
+            .padding(.vertical, VPad)
+            .background(
+                RoundedRectangle(cornerRadius: 5)
+                    .fill(Color.white)
+            ).overlay(
+                RoundedRectangle(cornerRadius: 5)
+                .inset(by: 1)
+                .stroke(strokeColor, lineWidth: lineWidth)
+            )
+    }
 }
 
 extension TextField {
@@ -66,7 +79,6 @@ extension TextField {
                 .inset(by: 1)
                 .stroke(Color.dividerGray, lineWidth: 2)
             )
-            
     }
 }
 
@@ -91,5 +103,19 @@ extension TextEditor {
                     .fill(Color.white)
                     .defaultShadow()
             }
+    }
+    
+    func jobCustomBackGround(HPad: CGFloat = 10, VPad: CGFloat = 5, minHeight: CGFloat = 150) -> some View {
+        self.padding(.horizontal, HPad)
+            .padding(.vertical, VPad)
+            .frame(minHeight: minHeight)
+            .background(
+                RoundedRectangle(cornerRadius: 5)
+                    .fill(Color.white)
+            ).overlay(
+                RoundedRectangle(cornerRadius: 5)
+                .inset(by: 1)
+                .stroke(Color.dividerGray, lineWidth: 1)
+            )
     }
 }

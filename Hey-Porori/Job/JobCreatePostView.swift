@@ -19,6 +19,15 @@ struct SelectBlock {
     var isSelected: Bool = false
 }
 
+enum PayType: String, CaseIterable, Identifiable {
+    var id: String { rawValue }
+    
+    case 시급
+    case 일급
+    case 월급
+    case 연봉
+}
+
 struct JobCreatePostView: View {
     @Binding var isPresentJobCreatePostView: Bool
     @State private var titleText = ""
@@ -31,6 +40,10 @@ struct JobCreatePostView: View {
     @State private var days: [SelectBlock] = dayList.map { SelectBlock(text: $0) }
     @State private var startTime = "09:00"
     @State private var endTime = "18:00"
+    @State private var payType: PayType = .시급
+    
+    @State private var detailText = ""
+    @State private var payText = ""
 
     var body: some View {
         VStack {
@@ -107,12 +120,84 @@ struct JobCreatePostView: View {
                         }.padding(.leading, 3)
                         HStack {
                             TimeDropDownView(selectedTime: $startTime)
+                            Text("~").defaultStyle_Bold(size: .size18)
                             TimeDropDownView(selectedTime: $endTime)
+                        }
+                    }.padding(.bottom, 25)
+                    
+                    // MARK: 급여
+                    VStack(alignment: .leading) {
+                        HStack {
+                            Text("급여").defaultStyle_Bold(size: .size16)
+                            Spacer()
+                        }.padding(.leading, 3)
+                        HStack {
+                            PayDropDownView(selectedPayType: $payType)
+                                .padding(.trailing, 30)
+                            ZStack {
+                                TextField("", text: $titleText)
+                                    .font(Font(.size15, weight: .medium))
+                                    .multilineTextAlignment(.trailing)
+                                    .padding(.trailing, 20)
+                                    .jobTextFieldCustomBackGround(lineWidth: 1)
+                                HStack {
+                                    Spacer()
+                                    Text("원").defaultStyle_Bold(size: .size17)
+                                        .padding(.trailing, 10)
+                                }
+                            }
+                        }
+                    }.padding(.bottom, 25)
+                    
+                    // MARK: 상세 내용
+                    ZStack {
+                        VStack(alignment: .leading) {
+                            HStack {
+                                Text("상세 내용").defaultStyle_Bold(size: .size16)
+                                Spacer()
+                            }.padding(.leading, 3)
+                            HStack {
+                                TextEditor(text: $detailText)
+                                    .jobCustomBackGround()
+                                    .font(Font(.size15))
+                            }
+                        }
+                        VStack {
+                            Spacer()
+                            HStack(spacing: 0) {
+                                Spacer()
+                                Text("\(detailText.count)")
+                                    .defaultStyle_customWeight(size: .size12, weight: .light)
+                                Text("/2000")
+                                    .defaultStyle_customWeight(size: .size12, weight: .light)
+                            }.padding(5)
                         }
                     }.padding(.bottom, 25)
                 }.padding(.horizontal, 25)
             }
         }.toolbar(.hidden)
+    }
+    
+    struct PayDropDownView: View {
+        private let payTypes: [PayType] = PayType.allCases
+        @Binding var selectedPayType: PayType
+        
+        var body: some View {
+            VStack(spacing: 20) {
+                Picker(selection: $selectedPayType) {
+                    ForEach(payTypes, id: \.self) {
+                        Text($0.rawValue)
+                    }
+                } label: {
+                    Text("\(selectedPayType.rawValue)")
+                }.pickerStyle(MenuPickerStyle())
+                    .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.dividerGray, lineWidth: 1)
+                    )
+                    .tint(.black)
+            }
+        }
     }
     
     struct TimeDropDownView: View {
