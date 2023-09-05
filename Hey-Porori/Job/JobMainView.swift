@@ -32,6 +32,7 @@ struct JobMainView: View {
     @State private var dummyShown: JobPostData?
     @State var searchText = ""
     @State var isPresentJobCreatePostView = false
+    @State var isPresentJobPostFilterView = false
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -53,12 +54,21 @@ struct JobMainView: View {
                 }
             }
             
-            // MARK: Search Bar
+            // MARK: 서치 바
             SearchTextBox(placeholder: "제목 등으로 검색하세요", searchText: $searchText)
             
-            // MARK: Filter with Tag
+            // MARK: 태그 필터
             HStack {
-                Image(systemName: "slider.horizontal.3").font(Font(.size23))
+                Button {
+                    isPresentJobPostFilterView = true
+                } label: {
+                    Image(systemName: "slider.horizontal.3")
+                        .font(Font(.size23))
+                        .foregroundColor(.black)
+                }.navigationDestination(isPresented: $isPresentJobPostFilterView) {
+                    JobPostFilterView(isPresentjobPostFilterView: $isPresentJobPostFilterView)
+                }
+                
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
                         filterBox(content: "창곡동 외 7건")
