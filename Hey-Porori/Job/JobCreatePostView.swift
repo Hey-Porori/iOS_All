@@ -37,9 +37,11 @@ struct JobCreatePostView: View {
     }
     @State private var workTimeSelectedCount: Int = 0
     @State private var workTimes: [SelectBlock] = workTimeTextList.map { SelectBlock(text: $0) }
-    @State private var days: [SelectBlock] = dayList.map { SelectBlock(text: $0) }
+    @State private var isWorkTime협상가능: Bool = false
+    @State private var workDays: [SelectBlock] = dayList.map { SelectBlock(text: $0) }
     @State private var startTime = "09:00"
     @State private var endTime = "18:00"
+    @State private var isWorkTimeInterval협상가능: Bool = false
     @State private var payType: PayType = .시급
     
     @State private var detailText = ""
@@ -97,6 +99,19 @@ struct JobCreatePostView: View {
                                 ToggleButton(text: self.workTimes[index].text, isSelected: self.$workTimes[index].isSelected, selectedCount: $workTimeSelectedCount)
                             }
                         }
+                    }
+                    
+                    // MARK: 근무 기간 협상 가능
+                    HStack {
+                        Button {
+                            isWorkTime협상가능.toggle()
+                        } label: {
+                            Image(systemName: isWorkTime협상가능 ? "checkmark.circle.fill" : "checkmark.circle")
+                                .font(Font(.size22))
+                                .foregroundColor(.mainBlue)
+                        }
+                        Text("협상가능").defaultStyle_customWeight(size: .size15, weight: .medium)
+                        Spacer()
                     }.padding(.bottom, 25)
                     
                     // MARK: 근무 요일
@@ -106,8 +121,8 @@ struct JobCreatePostView: View {
                             Spacer()
                         }.padding(.leading, 3)
                         HFlow {
-                            ForEach(0..<days.count, id: \.self) { index in
-                                ToggleCircleButton(text: self.days[index].text, isSelected: self.$days[index].isSelected)
+                            ForEach(0..<workDays.count, id: \.self) { index in
+                                ToggleCircleButton(text: self.workDays[index].text, isSelected: self.$workDays[index].isSelected)
                             }
                         }
                     }.padding(.bottom, 25)
@@ -123,7 +138,21 @@ struct JobCreatePostView: View {
                             Text("~").defaultStyle_Bold(size: .size18)
                             TimeDropDownView(selectedTime: $endTime)
                         }
+                    }
+                    
+                    // MARK: 근무 시간 협의 가능
+                    HStack {
+                        Button {
+                            isWorkTimeInterval협상가능.toggle()
+                        } label: {
+                            Image(systemName: isWorkTimeInterval협상가능 ? "checkmark.circle.fill" : "checkmark.circle")
+                                .font(Font(.size22))
+                                .foregroundColor(.mainBlue)
+                        }
+                        Text("협상가능").defaultStyle_customWeight(size: .size15, weight: .medium)
+                        Spacer()
                     }.padding(.bottom, 25)
+                    
                     
                     // MARK: 급여
                     VStack(alignment: .leading) {
@@ -175,6 +204,16 @@ struct JobCreatePostView: View {
                     }.padding(.bottom, 25)
                 }.padding(.horizontal, 25)
             }
+            // MARK: 작성하기 버튼
+            Text("작성하기")
+                .customStyle_Bold(size: .size22, color: .white)
+                .foregroundColor(.white)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 15)
+                .background {
+                RoundedRectangle(cornerRadius: 15)
+                    .fill(Color.subSkyBlue)
+                }.padding(.horizontal, 18)
         }.toolbar(.hidden)
     }
     
