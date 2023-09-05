@@ -34,54 +34,51 @@ struct JobMainView: View {
     @State var isPresentJobCreatePostView = false
     
     var body: some View {
-        NavigationStack {
-            VStack(alignment: .leading) {
-                // MARK: Location, Icons Header
-                HStack {
-                    Text("창곡동").defaultStyle_Bold(size: .size20)
-                    Image(systemName: "chevron.down").font(Font(.size18))
-                    Spacer()
-                    Image(systemName: "bell").font(Font(.size22))
-                    Image(systemName: "person").font(Font(.size22))
-                    Button {
-                        isPresentJobCreatePostView = true
-                    } label: {
-                        Image(systemName: "highlighter")
-                            .font(Font(.size22))
-                            .foregroundColor(.black)
-                    }.navigationDestination(isPresented: $isPresentJobCreatePostView) {
-                        JobCreatePostView(isPresentJobCreatePostView: $isPresentJobCreatePostView)
+        VStack(alignment: .leading) {
+            // MARK: Location, Icons Header
+            HStack {
+                Text("창곡동").defaultStyle_Bold(size: .size20)
+                Image(systemName: "chevron.down").font(Font(.size18))
+                Spacer()
+                Image(systemName: "bell").font(Font(.size22))
+                Image(systemName: "person").font(Font(.size22))
+                Button {
+                    isPresentJobCreatePostView = true
+                } label: {
+                    Image(systemName: "highlighter")
+                        .font(Font(.size22))
+                        .foregroundColor(.black)
+                }.navigationDestination(isPresented: $isPresentJobCreatePostView) {
+                    JobCreatePostView(isPresentJobCreatePostView: $isPresentJobCreatePostView)
+                }
+            }
+            
+            // MARK: Search Bar
+            SearchTextBox(placeholder: "제목 등으로 검색하세요", searchText: $searchText)
+            
+            // MARK: Filter with Tag
+            HStack {
+                Image(systemName: "slider.horizontal.3").font(Font(.size23))
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack {
+                        filterBox(content: "창곡동 외 7건")
+                        filterBox(content: "기간")
+                        filterBox(content: "하는 일")
+                        filterBox(content: "요일")
                     }
                 }
-                
-                // MARK: Search Bar
-                SearchTextBox(placeholder: "제목 등으로 검색하세요", searchText: $searchText)
-                
-                // MARK: Filter with Tag
-                HStack {
-                    Image(systemName: "slider.horizontal.3").font(Font(.size23))
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack {
-                            filterBox(content: "창곡동 외 7건")
-                            filterBox(content: "기간")
-                            filterBox(content: "하는 일")
-                            filterBox(content: "요일")
-                        }
+            }.padding(.top, 5)
+            
+            ScrollView {
+                ForEach(dummyList) { item in
+                    NavigationLink(value: item) {
+                        jobPostRow(postData: item)
                     }
-                }.padding(.top, 5)
-                
-                ScrollView {
-                    ForEach(dummyList) { item in
-                        NavigationLink(value: item) {
-                            jobPostRow(postData: item)
-                        }
-                    }.navigationDestination(for: JobPostData.self) { item in
-                        JobPostDetailView(postData: item)
-                    }
+                }.navigationDestination(for: JobPostData.self) { item in
+                    JobPostDetailView(postData: item)
                 }
-            }.padding(.horizontal, 24)
-        }
-        
+            }
+        }.padding(.horizontal, 24)
     }
     
     private func jobPostRow(postData: JobPostData) -> some View {

@@ -9,19 +9,21 @@ import SwiftUI
 
 struct MainTabView: View {
     var body: some View {
-        TabView {
-            JobMainView()
-                .tabItem {
-                    Label("알바", systemImage: "person")
-                }
-            CommunityMainView()
-                .tabItem {
-                    Label("커뮤니티", systemImage: "person")
-                }
-            CommunityMainView()
-                .tabItem {
-                    Label("사용자", systemImage: "person")
-                }
+        NavigationStack {
+            TabView {
+                JobMainView()
+                    .tabItem {
+                        Label("알바", systemImage: "person")
+                    }
+                CommunityMainView()
+                    .tabItem {
+                        Label("커뮤니티", systemImage: "person")
+                    }
+                CommunityMainView()
+                    .tabItem {
+                        Label("사용자", systemImage: "person")
+                    }
+            }
         }
     }
 }
