@@ -20,20 +20,7 @@ struct CommunityMapView: View {
         NavigationStack {
             VStack {
                 // MARK: 커뮤니티 맵 뷰 검색 바
-                HStack {
-                    TextField("게시글 제목, 내용, 태그, 닉네임으로 검색", text: $searchText)
-                        .font(Font(.size14))
-                        .padding(.leading, 10)
-                        .padding(.vertical, 8)
-                    Image(systemName: "magnifyingglass")
-                        .foregroundColor(.lightGray)
-                        .font(Font(.size24))
-                        .padding(5)
-                }.background {
-                    RoundedRectangle(cornerRadius: 10)
-                        .fill(Color.white)
-                        .defaultShadow()
-                }
+                SearchTextBox(placeholder: "게시글 제목, 내용, 태그, 닉네임으로 검색", searchText: $searchText)
                 .padding(.horizontal, 22)
                 
                 Spacer()

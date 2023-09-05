@@ -35,11 +35,11 @@ func communityPostRow() -> some View {
             .clipShape(RoundedRectangle(cornerRadius: 10))
         VStack(alignment: .leading) {
             Text("Lorem ipsum dolor amet consectetur.")
-                .font(.system(size: 16, weight: .bold))
+                .defaultStyle_Bold(size: .size16)
                 .lineLimit(1)
             Spacer().frame(height: 3)
             Text("Lorem ipsum dolor amet consectetur.")
-                .font(.system(size: 14))
+                .defaultStyle(size: .size14)
                 .lineLimit(1)
             Spacer()
             HStack {
