@@ -53,113 +53,90 @@ struct JobCreatePostView: View {
             ScrollView {
                 VStack {
                     // MARK: 제목
-                    VStack(alignment: .leading) {
-                        HStack {
-                            Text("제목").defaultStyle_Bold(size: .size16)
-                        }.padding(.leading, 3)
-                        
+                    JobPostSection(title: "제목") {
                         TextField("제목을 입력하세요", text: $titleText)
                             .jobDefaultBackGround()
                             .font(Font(.size18, weight: .bold))
-                    }.padding(.bottom, 25)
+                    }
                     
                     // MARK: 하는 일
-                    VStack(alignment: .leading) {
-                        HStack {
-                            Text("하는 일").defaultStyle_Bold(size: .size16)
-                            Spacer()
-                            HStack(spacing: 0) {
-                                Text("\(workTypeSelectedCount)")
-                                    .foregroundColor(.lightOrange)
-                                Text("/\(workTypes.count)")
-                            }
-                        }.padding(.leading, 3)
-                        
+                    JobPostSection_Right(title: "하는 일") {
+                        HStack(spacing: 0) {
+                            Text("\(workTypeSelectedCount)")
+                                .foregroundColor(.lightOrange)
+                            Text("/\(workTypes.count)")
+                        }
+                    } bottomComponent: {
                         HFlow(spacing: 8) {
                             ForEach(0..<workTypes.count, id: \.self) { index in
                                 ToggleButton(text: self.workTypes[index].text, isSelected: self.$workTypes[index].isSelected, selectedCount: $workTypeSelectedCount)
                             }
                         }
-                    }.padding(.bottom, 25)
+                    }
                     
                     // MARK: 근무 기간
-                    VStack(alignment: .leading) {
-                        HStack {
-                            Text("근무 기간").defaultStyle_Bold(size: .size16)
-                            Spacer()
-                            HStack(spacing: 0) {
-                                Text("\(workTimeSelectedCount)")
-                                    .foregroundColor(.lightOrange)
-                                Text("/\(workTimes.count)")
-                            }
-                        }.padding(.leading, 3)
-                        
+                    JobPostSection_Right(title: "근무 기간") {
+                        HStack(spacing: 0) {
+                            Text("\(workTimeSelectedCount)")
+                                .foregroundColor(.lightOrange)
+                            Text("/\(workTimes.count)")
+                        }
+                    } bottomComponent: {
                         HFlow(spacing: 8) {
                             ForEach(0..<workTimes.count, id: \.self) { index in
                                 ToggleButton(text: self.workTimes[index].text, isSelected: self.$workTimes[index].isSelected, selectedCount: $workTimeSelectedCount)
                             }
                         }
+                        // MARK: 근무 기간 협상 가능
+                        HStack {
+                            Button {
+                                isWorkTime협상가능.toggle()
+                            } label: {
+                                Image(systemName: isWorkTime협상가능 ? "checkmark.circle.fill" : "checkmark.circle")
+                                    .font(Font(.size22))
+                                    .foregroundColor(.mainBlue)
+                            }
+                            Text("협상가능").defaultStyle_customWeight(size: .size15, weight: .medium)
+                            Spacer()
+                        }
                     }
                     
-                    // MARK: 근무 기간 협상 가능
-                    HStack {
-                        Button {
-                            isWorkTime협상가능.toggle()
-                        } label: {
-                            Image(systemName: isWorkTime협상가능 ? "checkmark.circle.fill" : "checkmark.circle")
-                                .font(Font(.size22))
-                                .foregroundColor(.mainBlue)
-                        }
-                        Text("협상가능").defaultStyle_customWeight(size: .size15, weight: .medium)
-                        Spacer()
-                    }.padding(.bottom, 25)
-                    
                     // MARK: 근무 요일
-                    VStack(alignment: .leading) {
-                        HStack {
-                            Text("근무 요일").defaultStyle_Bold(size: .size16)
-                            Spacer()
-                        }.padding(.leading, 3)
+                    JobPostSection(title: "근무 요일") {
                         HFlow {
                             ForEach(0..<workDays.count, id: \.self) { index in
                                 ToggleCircleButton(text: self.workDays[index].text, isSelected: self.$workDays[index].isSelected)
+                                
                             }
+                            Spacer()
                         }
-                    }.padding(.bottom, 25)
+                    }
                     
                     // MARK: 근무 시간
-                    VStack(alignment: .leading) {
-                        HStack {
-                            Text("근무 시간").defaultStyle_Bold(size: .size16)
-                            Spacer()
-                        }.padding(.leading, 3)
+                    JobPostSection(title: "근무 시간") {
                         HStack {
                             TimeDropDownView(selectedTime: $startTime)
                             Text("~").defaultStyle_Bold(size: .size18)
                             TimeDropDownView(selectedTime: $endTime)
                         }
+                        // MARK: 근무 시간 협의 가능
+                        HStack {
+                            Button {
+                                isWorkTimeInterval협상가능.toggle()
+                            } label: {
+                                Image(systemName: isWorkTimeInterval협상가능 ? "checkmark.circle.fill" : "checkmark.circle")
+                                    .font(Font(.size22))
+                                    .foregroundColor(.mainBlue)
+                            }
+                            Text("협상가능").defaultStyle_customWeight(size: .size15, weight: .medium)
+                            Spacer()
+                        }.padding(.bottom, 25)
                     }
                     
-                    // MARK: 근무 시간 협의 가능
-                    HStack {
-                        Button {
-                            isWorkTimeInterval협상가능.toggle()
-                        } label: {
-                            Image(systemName: isWorkTimeInterval협상가능 ? "checkmark.circle.fill" : "checkmark.circle")
-                                .font(Font(.size22))
-                                .foregroundColor(.mainBlue)
-                        }
-                        Text("협상가능").defaultStyle_customWeight(size: .size15, weight: .medium)
-                        Spacer()
-                    }.padding(.bottom, 25)
-                    
+                
                     
                     // MARK: 급여
-                    VStack(alignment: .leading) {
-                        HStack {
-                            Text("급여").defaultStyle_Bold(size: .size16)
-                            Spacer()
-                        }.padding(.leading, 3)
+                    JobPostSection(title: "급여") {
                         HStack {
                             PayDropDownView(selectedPayType: $payType)
                                 .padding(.trailing, 30)
@@ -176,32 +153,28 @@ struct JobCreatePostView: View {
                                 }
                             }
                         }
-                    }.padding(.bottom, 25)
+                    }
                     
                     // MARK: 상세 내용
-                    ZStack {
-                        VStack(alignment: .leading) {
-                            HStack {
-                                Text("상세 내용").defaultStyle_Bold(size: .size16)
-                                Spacer()
-                            }.padding(.leading, 3)
+                    JobPostSection(title: "상세 내용") {
+                        ZStack {
                             HStack {
                                 TextEditor(text: $detailText)
                                     .jobCustomBackGround()
                                     .font(Font(.size15))
                             }
-                        }
-                        VStack {
-                            Spacer()
-                            HStack(spacing: 0) {
+                            VStack {
                                 Spacer()
-                                Text("\(detailText.count)")
-                                    .defaultStyle_customWeight(size: .size12, weight: .light)
-                                Text("/2000")
-                                    .defaultStyle_customWeight(size: .size12, weight: .light)
-                            }.padding(5)
+                                HStack(spacing: 0) {
+                                    Spacer()
+                                    Text("\(detailText.count)")
+                                        .defaultStyle_customWeight(size: .size12, weight: .light)
+                                    Text("/2000")
+                                        .defaultStyle_customWeight(size: .size12, weight: .light)
+                                }.padding(5)
+                            }
                         }
-                    }.padding(.bottom, 25)
+                    }
                 }.padding(.horizontal, 25)
             }
             // MARK: 작성하기 버튼

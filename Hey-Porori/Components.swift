@@ -85,3 +85,53 @@ func rightButtonHeaderView(headerText: String, isViewPresented: Binding<Bool>, r
         }
     }.padding(.horizontal, 13).padding(.top, 5)
 }
+
+
+/// 아르바이트(Job) 페이지에서,
+/// 알바공고 쓰기 (JobCreatePostView)와, 검색조건 설정(JobPostFilterView)에서 쓰이는 기본 View Section입니다.
+struct JobPostSection<BottomComponent: View>: View {
+    let title: String
+    let bottomComponent: BottomComponent
+    
+    init(title: String, @ViewBuilder bottomComponent: () -> BottomComponent) {
+        self.title = title
+        self.bottomComponent = bottomComponent()
+    }
+    
+    var body: some View {
+        VStack(alignment: .leading) {
+            HStack {
+                Text("\(title)").defaultStyle_Bold(size: .size16)
+            }.padding(.leading, 3)
+            
+            bottomComponent
+        }.padding(.bottom, 25)
+    }
+}
+
+/// 아르바이트(Job) 페이지에서,
+/// 알바공고 쓰기 (JobCreatePostView)와, 검색조건 설정(JobPostFilterView)에서 쓰이는 기본 View Section입니다.
+/// Title Row의 우측에 다른 View를 추가할 때의 버전입니다.
+struct JobPostSection_Right<BottomComponent: View, RightComponent: View>: View {
+    let title: String
+    let rightComponent: RightComponent
+    let bottomComponent: BottomComponent
+    
+    init(title: String, @ViewBuilder rightComponent: () -> RightComponent, @ViewBuilder bottomComponent: () -> BottomComponent) {
+        self.title = title
+        self.rightComponent = rightComponent()
+        self.bottomComponent = bottomComponent()
+    }
+    
+    var body: some View {
+        VStack(alignment: .leading) {
+            HStack {
+                Text("\(title)").defaultStyle_Bold(size: .size16)
+                Spacer()
+                rightComponent
+            }.padding(.leading, 3)
+            
+            bottomComponent
+        }.padding(.bottom, 25)
+    }
+}
