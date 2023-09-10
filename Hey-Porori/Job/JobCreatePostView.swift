@@ -46,6 +46,10 @@ struct JobCreatePostView: View {
     
     @State private var detailText = ""
     @State private var payText = ""
+    
+    @State private var 상호명 = ""
+    @State private var address = ""
+    @State private var phone = ""
 
     var body: some View {
         VStack {
@@ -174,6 +178,27 @@ struct JobCreatePostView: View {
                                 }.padding(5)
                             }
                         }
+                    }
+                    
+                    // MARK: 상호명
+                    JobPostSection(title: "상호명") {
+                        TextField("", text: $상호명)
+                            .jobDefaultBackGround()
+                            .font(Font(.size18, weight: .bold))
+                    }
+                    
+                    // MARK: 주소
+                    JobPostSection(title: "주소") {
+                        TextField("", text: $address)
+                            .jobDefaultBackGround()
+                            .font(Font(.size18, weight: .bold))
+                    }
+                    
+                    // MARK: 연락처
+                    JobPostSection(title: "연락처") {
+                        TextField("", text: $phone)
+                            .jobDefaultBackGround()
+                            .font(Font(.size18, weight: .bold))
                     }
                 }.padding(.horizontal, 25)
             }
