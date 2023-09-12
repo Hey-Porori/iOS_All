@@ -12,6 +12,17 @@ struct IdTokenBody: Encodable {
     var token: String
 }
 
+struct userAdditionalInfoBody: Encodable {
+    var accessToken: String
+    var address: String
+    var email: String
+    var gender: Bool
+    var imageUrl: String
+    var name: String
+    var nickName: String
+    var phoneNumber: String
+}
+
 struct SignInWithAppleResponse: Decodable {
     let data: SignInData
     let message: String
@@ -36,27 +47,36 @@ final class UserAPIManager {
         let header: HTTPHeaders = ["Content-Type": "application/json", "Accept": "application/json"]
         
         AF.request(signInWithAppleUrl, method: .post, parameters: param, encoder: JSONParameterEncoder.default, headers: header)
-//            .responseDecodable(of: SignInWithAppleResponse.self) { response in
+            .responseDecodable(of: SignInWithAppleResponse.self) { response in
 //                print("Request: \(String(describing: response.request))")
 //                print("Response: \(String(describing: response.response))")
 //                print("Result: \(response.result)")
-//
-//                switch response.result {
-//                case .success(let value):
-//                    print(value)
-//                case .failure(let error):
-//                    print(error)
-//                }
-//            }
-            .responseData { response in
+
+                switch response.result {
+                case .success(let value):
+                    print("Success to sign in with apple")
+                    UserAPIManager.shared.dummyRegister(token: value.data.accessToken)
+                case .failure(let error):
+                    print(error)
+                }
+            }
+    }
+    
+    func dummyRegister(token: String) {
+        let dummyResisterUrl = userUrl + "/api/users/additional-info"
+        
+        let param = userAdditionalInfoBody(accessToken: token, address: "서대문구 세무서길 141-12", email: "jm10123@gmail.com", gender: false, imageUrl: "1231", name: "김민수", nickName: "민수민수", phoneNumber: "010-1234-5678")
+        let header: HTTPHeaders = ["Content-Type": "application/json", "Accept": "application/json"]
+
+        AF.request(dummyResisterUrl, method: .put, parameters: param, encoder: JSONParameterEncoder.default, headers: header)
+            .responseDecodable(of: SignInWithAppleResponse.self) { response in
                 print("Request: \(String(describing: response.request))")
                 print("Response: \(String(describing: response.response))")
                 print("Result: \(response.result)")
+
                 switch response.result {
                 case .success(let value):
-                    if let jsonString = String(data: value, encoding: .utf8) {
-                        print(jsonString)
-                    }
+                    print(value)
                 case .failure(let error):
                     print(error)
                 }

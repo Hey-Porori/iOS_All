@@ -26,9 +26,9 @@
 		0EDBCE112AB0B42600B02DCF /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 0EDBCE102AB0B42600B02DCF /* Moya */; };
 		0EDBCE132AB0B42600B02DCF /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 0EDBCE122AB0B42600B02DCF /* ReactiveMoya */; };
 		0EDBCE152AB0B42600B02DCF /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 0EDBCE142AB0B42600B02DCF /* RxMoya */; };
+		0EDBCE172AB0B4BE00B02DCF /* APIURL.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0EDBCE162AB0B4BE00B02DCF /* APIURL.plist */; };
 		0EE95D742A605940005B9E16 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 0EE95D732A605940005B9E16 /* .swiftlint.yml */; };
 		0EE95D762A60597D005B9E16 /* .pre-commit-config.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 0EE95D752A60597D005B9E16 /* .pre-commit-config.yaml */; };
-		0EEA36F12A88A9E90034C024 /* APIURL.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0EEA36F02A88A9E90034C024 /* APIURL.plist */; };
 		0EEA36F32A88AE890034C024 /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEA36F22A88AE890034C024 /* BundleExtension.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,9 +68,9 @@
 		0E71328B2A47E7CC0003306C /* Hey-PororiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hey-PororiTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E7132952A47E7CC0003306C /* Hey-PororiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hey-PororiUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EBE7D602A7C9C0000ACE2A1 /* TextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExtension.swift; sourceTree = "<group>"; };
+		0EDBCE162AB0B4BE00B02DCF /* APIURL.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIURL.plist; sourceTree = "<group>"; };
 		0EE95D732A605940005B9E16 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		0EE95D752A60597D005B9E16 /* .pre-commit-config.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = ".pre-commit-config.yaml"; sourceTree = "<group>"; };
-		0EEA36F02A88A9E90034C024 /* APIURL.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIURL.plist; sourceTree = "<group>"; };
 		0EEA36F22A88AE890034C024 /* BundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,7 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				0E26AE7B2A87D2BD00874903 /* UserAPIManager.swift */,
-				0EEA36F02A88A9E90034C024 /* APIURL.plist */,
+				0EDBCE162AB0B4BE00B02DCF /* APIURL.plist */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -316,7 +316,7 @@
 				0E7132862A47E7CB0003306C /* Preview Assets.xcassets in Resources */,
 				0EE95D762A60597D005B9E16 /* .pre-commit-config.yaml in Resources */,
 				0E7132832A47E7CB0003306C /* Assets.xcassets in Resources */,
-				0EEA36F12A88A9E90034C024 /* APIURL.plist in Resources */,
+				0EDBCE172AB0B4BE00B02DCF /* APIURL.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
