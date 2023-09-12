@@ -50,6 +50,7 @@ struct JobCreatePostView: View {
     @State private var 상호명 = ""
     @State private var address = ""
     @State private var phone = ""
+    @State private var is약관동의: Bool = false
 
     var body: some View {
         VStack {
@@ -180,26 +181,43 @@ struct JobCreatePostView: View {
                         }
                     }
                     
-                    // MARK: 상호명
-                    JobPostSection(title: "상호명") {
-                        TextField("", text: $상호명)
-                            .jobDefaultBackGround()
-                            .font(Font(.size18, weight: .bold))
+                    // Extra Argument in call 해결
+                    VStack {
+                        // MARK: 상호명
+                        JobPostSection(title: "상호명") {
+                            TextField("", text: $상호명)
+                                .jobDefaultBackGround()
+                                .font(Font(.size18, weight: .bold))
+                        }
+                        
+                        // MARK: 주소
+                        JobPostSection(title: "주소") {
+                            TextField("", text: $address)
+                                .jobDefaultBackGround()
+                                .font(Font(.size18, weight: .bold))
+                        }
+                        
+                        // MARK: 연락처
+                        JobPostSection(title: "연락처") {
+                            TextField("", text: $phone)
+                                .jobDefaultBackGround()
+                                .font(Font(.size18, weight: .bold))
+                        }
+                        
+                        // MARK: 알바 약관 동의
+                        HStack {
+                            Button {
+                                is약관동의.toggle()
+                            } label: {
+                                Image(systemName: is약관동의 ? "checkmark.circle.fill" : "checkmark.circle")
+                                    .font(Font(.size22))
+                                    .foregroundColor(.mainBlue)
+                            }
+                            Text("알바 약관 동의하기").defaultStyle_customWeight(size: .size15, weight: .medium)
+                            Spacer()
+                        }.padding(.bottom, 25)
                     }
                     
-                    // MARK: 주소
-                    JobPostSection(title: "주소") {
-                        TextField("", text: $address)
-                            .jobDefaultBackGround()
-                            .font(Font(.size18, weight: .bold))
-                    }
-                    
-                    // MARK: 연락처
-                    JobPostSection(title: "연락처") {
-                        TextField("", text: $phone)
-                            .jobDefaultBackGround()
-                            .font(Font(.size18, weight: .bold))
-                    }
                 }.padding(.horizontal, 25)
             }
             // MARK: 작성하기 버튼

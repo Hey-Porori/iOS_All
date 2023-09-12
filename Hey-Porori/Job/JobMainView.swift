@@ -31,8 +31,11 @@ struct JobMainView: View {
     
     @State private var dummyShown: JobPostData?
     @State var searchText = ""
+    
+    // MARK: View Presenting Variable.
     @State var isPresentJobCreatePostView = false
     @State var isPresentJobPostFilterView = false
+    @State var isPresentJobProfileView = false
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -42,7 +45,15 @@ struct JobMainView: View {
                 Image(systemName: "chevron.down").font(Font(.size18))
                 Spacer()
                 Image(systemName: "bell").font(Font(.size22))
-                Image(systemName: "person").font(Font(.size22))
+                Button {
+                    isPresentJobProfileView = true
+                } label: {
+                    Image(systemName: "person")
+                        .font(Font(.size22))
+                        .foregroundColor(.black)
+                }.navigationDestination(isPresented: $isPresentJobProfileView) {
+                    JobProfileView(isPresentJobProfileView: $isPresentJobProfileView)
+                }
                 Button {
                     isPresentJobCreatePostView = true
                 } label: {
@@ -91,21 +102,6 @@ struct JobMainView: View {
         }.padding(.horizontal, 24)
     }
     
-    private func jobPostRow(postData: JobPostData) -> some View {
-        return HStack {
-            VStack(alignment: .leading) {
-                Text(postData.title).defaultStyle_Bold(size: .size17)
-                Text("\(postData.location) | \(postData.postTime)")
-                    .defaultStyle(size: .size15)
-                Spacer()
-                Text("시급 \(postData.payPerTime)원").defaultGrayStyle(size: .size15)
-                Text("\(postData.workTime)").defaultGrayStyle(size: .size15)
-            }
-            Spacer()
-            Image(systemName: "chevron.forward").font(Font(.size18)).foregroundColor(.darkGray)
-        }.frame(maxHeight: 95).padding(.top, 20)
-    }
-    
     private func filterBox(content: String) -> some View {
         return HStack {
             Text("\(content)").customStyle_Bold(size: .size14, color: .white).padding(.trailing, -3).lineLimit(1)
@@ -115,4 +111,19 @@ struct JobMainView: View {
                 .fill(Color.darkBlue)
         }
     }
+}
+
+func jobPostRow(postData: JobPostData) -> some View {
+    return HStack {
+        VStack(alignment: .leading) {
+            Text(postData.title).defaultStyle_Bold(size: .size17)
+            Text("\(postData.location) | \(postData.postTime)")
+                .defaultStyle(size: .size15)
+            Spacer()
+            Text("시급 \(postData.payPerTime)원").defaultGrayStyle(size: .size15)
+            Text("\(postData.workTime)").defaultGrayStyle(size: .size15)
+        }
+        Spacer()
+        Image(systemName: "chevron.forward").font(Font(.size18)).foregroundColor(.darkGray)
+    }.frame(maxHeight: 95).padding(.top, 20)
 }
