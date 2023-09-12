@@ -7,6 +7,13 @@
 
 import SwiftUI
 
+/// Screen's Width and Height.
+extension UIScreen{
+   static let screenWidth = UIScreen.main.bounds.size.width
+   static let screenHeight = UIScreen.main.bounds.size.height
+   static let screenSize = UIScreen.main.bounds.size
+}
+
 extension View {
     func defaultShadow() -> some View {
         self.shadow(color: .shadowGray, radius: 2, y: 2)

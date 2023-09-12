@@ -17,7 +17,6 @@ struct CommunityMapView: View {
     @State private var searchText = ""
     
     var body: some View {
-        NavigationStack {
             VStack {
                 // MARK: 커뮤니티 맵 뷰 검색 바
                 SearchTextBox(placeholder: "게시글 제목, 내용, 태그, 닉네임으로 검색", searchText: $searchText)
@@ -35,8 +34,7 @@ struct CommunityMapView: View {
 //                            }
                     }.padding(.trailing, 10)
                 }.padding(.bottom, 20)
-            }
-        }.fullScreenCover(isPresented: $createPostViewIsPresented) {
+            }.fullScreenCover(isPresented: $createPostViewIsPresented) {
             CommunityCreatePostView(createPostViewIsPresented: $createPostViewIsPresented)
         }
     }

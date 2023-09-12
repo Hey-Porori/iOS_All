@@ -31,72 +31,85 @@ struct JobMainView: View {
     
     @State private var dummyShown: JobPostData?
     @State var searchText = ""
+    
+    // MARK: View Presenting Variable.
     @State var isPresentJobCreatePostView = false
+    @State var isPresentJobPostFilterView = false
+    @State var isPresentJobProfileView = false
+    @State var isPresentApplyListView = false
     
     var body: some View {
-        NavigationStack {
-            VStack(alignment: .leading) {
-                // MARK: Location, Icons Header
-                HStack {
-                    Text("창곡동").defaultStyle_Bold(size: .size20)
-                    Image(systemName: "chevron.down").font(Font(.size18))
-                    Spacer()
-                    Image(systemName: "bell").font(Font(.size22))
-                    Image(systemName: "person").font(Font(.size22))
-                    Button {
-                        isPresentJobCreatePostView = true
-                    } label: {
-                        Image(systemName: "highlighter")
-                            .font(Font(.size22))
-                            .foregroundColor(.black)
-                    }.navigationDestination(isPresented: $isPresentJobCreatePostView) {
-                        JobCreatePostView(isPresentJobCreatePostView: $isPresentJobCreatePostView)
-                    }
-                }
-                
-                // MARK: Search Bar
-                SearchTextBox(placeholder: "제목 등으로 검색하세요", searchText: $searchText)
-                
-                // MARK: Filter with Tag
-                HStack {
-                    Image(systemName: "slider.horizontal.3").font(Font(.size23))
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack {
-                            filterBox(content: "창곡동 외 7건")
-                            filterBox(content: "기간")
-                            filterBox(content: "하는 일")
-                            filterBox(content: "요일")
-                        }
-                    }
-                }.padding(.top, 5)
-                
-                ScrollView {
-                    ForEach(dummyList) { item in
-                        NavigationLink(value: item) {
-                            jobPostRow(postData: item)
-                        }
-                    }.navigationDestination(for: JobPostData.self) { item in
-                        JobPostDetailView(postData: item)
-                    }
-                }
-            }.padding(.horizontal, 24)
-        }
-        
-    }
-    
-    private func jobPostRow(postData: JobPostData) -> some View {
-        return HStack {
-            VStack(alignment: .leading) {
-                Text(postData.title).defaultStyle_Bold(size: .size17)
-                Text("\(postData.location) | \(postData.postTime)")
-                    .defaultStyle(size: .size15)
+        VStack(alignment: .leading) {
+            // MARK: Location, Icons Header
+            HStack {
+                Text("창곡동").defaultStyle_Bold(size: .size20)
+                Image(systemName: "chevron.down").font(Font(.size18))
                 Spacer()
-                Text("시급 \(postData.payPerTime)원").defaultGrayStyle(size: .size15)
-                Text("\(postData.workTime)").defaultGrayStyle(size: .size15)
+                Button {
+                    isPresentApplyListView = true
+                } label: {
+                    Image(systemName: "bell")
+                        .font(Font(.size22))
+                        .foregroundColor(.black)
+                }.navigationDestination(isPresented: $isPresentApplyListView) {
+                    JobApplyListView(isPresentApplyListView: $isPresentApplyListView)
+                }
+
+                Button {
+                    isPresentJobProfileView = true
+                } label: {
+                    Image(systemName: "person")
+                        .font(Font(.size22))
+                        .foregroundColor(.black)
+                }.navigationDestination(isPresented: $isPresentJobProfileView) {
+                    JobProfileView(isPresentJobProfileView: $isPresentJobProfileView)
+                }
+                Button {
+                    isPresentJobCreatePostView = true
+                } label: {
+                    Image(systemName: "highlighter")
+                        .font(Font(.size22))
+                        .foregroundColor(.black)
+                }.navigationDestination(isPresented: $isPresentJobCreatePostView) {
+                    JobCreatePostView(isPresentJobCreatePostView: $isPresentJobCreatePostView)
+                }
             }
-            Spacer()
-            Image(systemName: "chevron.forward").font(Font(.size18)).foregroundColor(.darkGray)
-        }.frame(maxHeight: 95).padding(.top, 20)
+            
+            // MARK: 서치 바
+            SearchTextBox(placeholder: "제목 등으로 검색하세요", searchText: $searchText)
+            
+            // MARK: 태그 필터
+            HStack {
+                Button {
+                    isPresentJobPostFilterView = true
+                } label: {
+                    Image(systemName: "slider.horizontal.3")
+                        .font(Font(.size23))
+                        .foregroundColor(.black)
+                }.navigationDestination(isPresented: $isPresentJobPostFilterView) {
+                    JobPostFilterView(isPresentjobPostFilterView: $isPresentJobPostFilterView)
+                }
+                
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack {
+                        filterBox(content: "창곡동 외 7건")
+                        filterBox(content: "기간")
+                        filterBox(content: "하는 일")
+                        filterBox(content: "요일")
+                    }
+                }
+            }.padding(.top, 5)
+            
+            ScrollView {
+                ForEach(dummyList) { item in
+                    NavigationLink(value: item) {
+                        jobPostRow(postData: item)
+                    }
+                }.navigationDestination(for: JobPostData.self) { item in
+                    JobPostDetailView(postData: item)
+                }
+            }
+        }.padding(.horizontal, 24)
     }
     
     private func filterBox(content: String) -> some View {
@@ -108,4 +121,19 @@ struct JobMainView: View {
                 .fill(Color.darkBlue)
         }
     }
+}
+
+func jobPostRow(postData: JobPostData) -> some View {
+    return HStack {
+        VStack(alignment: .leading) {
+            Text(postData.title).defaultStyle_Bold(size: .size17)
+            Text("\(postData.location) | \(postData.postTime)")
+                .defaultStyle(size: .size15)
+            Spacer()
+            Text("시급 \(postData.payPerTime)원").defaultGrayStyle(size: .size15)
+            Text("\(postData.workTime)").defaultGrayStyle(size: .size15)
+        }
+        Spacer()
+        Image(systemName: "chevron.forward").font(Font(.size18)).foregroundColor(.darkGray)
+    }.frame(maxHeight: 95).padding(.top, 20)
 }
