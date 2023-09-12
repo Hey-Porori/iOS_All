@@ -36,6 +36,7 @@ struct JobMainView: View {
     @State var isPresentJobCreatePostView = false
     @State var isPresentJobPostFilterView = false
     @State var isPresentJobProfileView = false
+    @State var isPresentApplyListView = false
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -44,7 +45,16 @@ struct JobMainView: View {
                 Text("창곡동").defaultStyle_Bold(size: .size20)
                 Image(systemName: "chevron.down").font(Font(.size18))
                 Spacer()
-                Image(systemName: "bell").font(Font(.size22))
+                Button {
+                    isPresentApplyListView = true
+                } label: {
+                    Image(systemName: "bell")
+                        .font(Font(.size22))
+                        .foregroundColor(.black)
+                }.navigationDestination(isPresented: $isPresentApplyListView) {
+                    JobApplyListView(isPresentApplyListView: $isPresentApplyListView)
+                }
+
                 Button {
                     isPresentJobProfileView = true
                 } label: {
