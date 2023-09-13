@@ -48,10 +48,6 @@ final class UserAPIManager {
         
         AF.request(signInWithAppleUrl, method: .post, parameters: param, encoder: JSONParameterEncoder.default, headers: header)
             .responseDecodable(of: SignInWithAppleResponse.self) { response in
-                //                print("Request: \(String(describing: response.request))")
-                //                print("Response: \(String(describing: response.response))")
-                //                print("Result: \(response.result)")
-                
                 switch response.result {
                 case .success(let value):
                     print("Success to sign in with apple")
