@@ -9,6 +9,7 @@ import SwiftUI
 import AuthenticationServices
 
 struct LoginView: View {
+    @EnvironmentObject var userData: UserData
     
     var body: some View {
         VStack {
@@ -33,7 +34,7 @@ struct LoginView: View {
                         let email = appleIDCredential.email
                         let identityToken = String(data: appleIDCredential.identityToken!, encoding: .utf8)
                         let authorizationCode = String(data: appleIDCredential.authorizationCode!, encoding: .utf8)
-                    UserAPIManager.shared.signInWithApple(token: identityToken!)
+                    UserAPIManager.shared.signInWithApple(token: identityToken!, userData: userData)
                 default:
                     break
                 }
