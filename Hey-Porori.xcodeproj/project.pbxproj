@@ -19,6 +19,7 @@
 		0E2D679D2AB5DDF0006CF89D /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 0E2D679C2AB5DDF0006CF89D /* Moya */; };
 		0E2D679F2AB5DDF0006CF89D /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 0E2D679E2AB5DDF0006CF89D /* ReactiveMoya */; };
 		0E2D67A12AB5DDF0006CF89D /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 0E2D67A02AB5DDF0006CF89D /* RxMoya */; };
+		0E2D67A42AB5DDF0006CF89D /* UserOB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2D67A32AB5DDF0006CF89D /* UserOB.swift */; };
 		0E6AE2822A62D6BE008ADD83 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6AE2812A62D6BE008ADD83 /* Colors.swift */; };
 		0E6AE2852A62D957008ADD83 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6AE2842A62D957008ADD83 /* MainTabView.swift */; };
 		0E6AE2872A62DAEE008ADD83 /* CommunityMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6AE2862A62DAEE008ADD83 /* CommunityMainView.swift */; };
@@ -47,6 +48,7 @@
 		0E2D67932AB5DDF0006CF89D /* UserAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAPIManager.swift; sourceTree = "<group>"; };
 		0E2D67952AB5DDF0006CF89D /* APIURL.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = APIURL.plist; sourceTree = "<group>"; };
 		0E2D67972AB5DDF0006CF89D /* BundleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
+		0E2D67A32AB5DDF0006CF89D /* UserOB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserOB.swift; sourceTree = "<group>"; };
 		0E6AE2812A62D6BE008ADD83 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		0E6AE2842A62D957008ADD83 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		0E6AE2862A62DAEE008ADD83 /* CommunityMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityMainView.swift; sourceTree = "<group>"; };
@@ -106,6 +108,14 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		0E2D67A22AB5DDF0006CF89D /* Observables */ = {
+			isa = PBXGroup;
+			children = (
+				0E2D67A32AB5DDF0006CF89D /* UserOB.swift */,
+			);
+			path = Observables;
+			sourceTree = "<group>";
+		};
 		0E6AE2802A62D6AC008ADD83 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +157,7 @@
 		0E71327D2A47E7CA0003306C /* Hey-Porori */ = {
 			isa = PBXGroup;
 			children = (
+				0E2D67A22AB5DDF0006CF89D /* Observables */,
 				0E2D67922AB5DDF0006CF89D /* API */,
 				0E2D678C2AB5DDF0006CF89D /* Hey-Porori.entitlements */,
 				0EBE7D5F2A7C9BF200ACE2A1 /* Extensions */,
@@ -292,6 +303,7 @@
 				0E6AE2852A62D957008ADD83 /* MainTabView.swift in Sources */,
 				0E2D67942AB5DDF0006CF89D /* UserAPIManager.swift in Sources */,
 				0E6AE2932A6ABE00008ADD83 /* CommunityCreatePostView.swift in Sources */,
+				0E2D67A42AB5DDF0006CF89D /* UserOB.swift in Sources */,
 				0E25D10D2A6D41F600EF45B1 /* DesignModifier.swift in Sources */,
 				0E89AB7B2AAF6F3600D776D7 /* JobProfileView.swift in Sources */,
 				0E6AE28B2A63CB0C008ADD83 /* CommunityMapView.swift in Sources */,
