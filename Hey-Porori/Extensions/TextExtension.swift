@@ -26,22 +26,44 @@ enum TextSize: CGFloat {
     case size27 = 27
 }
 
+// MARK: Default Style (Black)
 extension Text {
     func defaultStyle(size: TextSize = .size13) -> some View {
-        self.foregroundColor(.darkGray)
+        self.foregroundColor(.black)
             .font(.system(size: size.rawValue))
     }
     
     func defaultStyle_Bold(size: TextSize = .size13) -> some View {
-        self.foregroundColor(.darkGray)
+        self.foregroundColor(.black)
             .font(.system(size: size.rawValue, weight: .bold))
     }
     
     func defaultStyle_customWeight(size: TextSize = .size13, weight: Font.Weight = .regular) -> some View {
+        self.foregroundColor(.black)
+            .font(.system(size: size.rawValue, weight: weight))
+    }
+}
+
+// MARK: Default Style (Gray)
+extension Text {
+    func defaultGrayStyle(size: TextSize = .size13) -> some View {
+        self.foregroundColor(.darkGray)
+            .font(.system(size: size.rawValue))
+    }
+    
+    func defaultGrayStyle_Bold(size: TextSize = .size13) -> some View {
+        self.foregroundColor(.darkGray)
+            .font(.system(size: size.rawValue, weight: .bold))
+    }
+    
+    func defaultGrayStyle_customWeight(size: TextSize = .size13, weight: Font.Weight = .regular) -> some View {
         self.foregroundColor(.darkGray)
             .font(.system(size: size.rawValue, weight: weight))
     }
-    
+}
+
+// MARK: Custom Color
+extension Text {
     func customStyle(size: TextSize = .size13, color: Color) -> some View {
         self.foregroundColor(color)
             .font(.system(size: size.rawValue))

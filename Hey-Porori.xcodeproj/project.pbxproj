@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E2220FD2A7D6F51008083BD /* JobMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2220FC2A7D6F51008083BD /* JobMainView.swift */; };
+		0E2220FF2A7D7C98008083BD /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2220FE2A7D7C98008083BD /* Components.swift */; };
 		0E25D10D2A6D41F600EF45B1 /* DesignModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E25D10C2A6D41F600EF45B1 /* DesignModifier.swift */; };
 		0E26AE792A87792600874903 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0E26AE782A87792600874903 /* Alamofire */; };
 		0E26AE7C2A87D2BD00874903 /* UserAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E26AE7B2A87D2BD00874903 /* UserAPIManager.swift */; };
@@ -19,9 +21,17 @@
 		0E6AE28D2A63D53B008ADD83 /* CommunityHotPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6AE28C2A63D53B008ADD83 /* CommunityHotPostView.swift */; };
 		0E6AE28F2A6ABB7B008ADD83 /* CommunityMyPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6AE28E2A6ABB7B008ADD83 /* CommunityMyPostView.swift */; };
 		0E6AE2932A6ABE00008ADD83 /* CommunityCreatePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6AE2922A6ABE00008ADD83 /* CommunityCreatePostView.swift */; };
+		0E6DE2F42A7E1C52003B746D /* JobPostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6DE2F32A7E1C52003B746D /* JobPostDetailView.swift */; };
 		0E71327F2A47E7CA0003306C /* Hey_PororiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71327E2A47E7CA0003306C /* Hey_PororiApp.swift */; };
-		0E7132832A47E7CB0003306C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E7132822A47E7CB0003306C /* Assets.xcassets */; };
-		0E7132862A47E7CB0003306C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E7132852A47E7CB0003306C /* Preview Assets.xcassets */; };
+		0E89AB7B2AAF6F3600D776D7 /* JobProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E89AB7A2AAF6F3600D776D7 /* JobProfileView.swift */; };
+		0E89AB7D2AB0A58600D776D7 /* JobApplyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E89AB7C2AB0A58600D776D7 /* JobApplyListView.swift */; };
+		0E8BF85D2A9B265000AAB263 /* JobCreatePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8BF85C2A9B265000AAB263 /* JobCreatePostView.swift */; };
+		0E8BF8612A9B2C7700AAB263 /* .pre-commit-config.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 0EE95D752A60597D005B9E16 /* .pre-commit-config.yaml */; };
+		0E8BF8622A9B2C7700AAB263 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 0EE95D732A605940005B9E16 /* .swiftlint.yml */; };
+		0E8BF8632A9B2C7700AAB263 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E7132822A47E7CB0003306C /* Assets.xcassets */; };
+		0E9D99602A9B504E0092F722 /* Flow in Frameworks */ = {isa = PBXBuildFile; productRef = 0E9D995F2A9B504E0092F722 /* Flow */; };
+		0E9D99622A9B504E0092F722 /* Renderer in Frameworks */ = {isa = PBXBuildFile; productRef = 0E9D99612A9B504E0092F722 /* Renderer */; };
+		0EA2B2DA2AA758FC00C8D5A9 /* JobPostFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA2B2D92AA758FC00C8D5A9 /* JobPostFilterView.swift */; };
 		0EBE7D612A7C9C0000ACE2A1 /* TextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBE7D602A7C9C0000ACE2A1 /* TextExtension.swift */; };
 		0EDBCE0F2AB0B42600B02DCF /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 0EDBCE0E2AB0B42600B02DCF /* CombineMoya */; };
 		0EDBCE112AB0B42600B02DCF /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 0EDBCE102AB0B42600B02DCF /* Moya */; };
@@ -33,24 +43,9 @@
 		0EEA36F32A88AE890034C024 /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEA36F22A88AE890034C024 /* BundleExtension.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		0E71328C2A47E7CC0003306C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0E7132732A47E7CA0003306C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0E71327A2A47E7CA0003306C;
-			remoteInfo = "Hey-Porori";
-		};
-		0E7132962A47E7CC0003306C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0E7132732A47E7CA0003306C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0E71327A2A47E7CA0003306C;
-			remoteInfo = "Hey-Porori";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		0E2220FC2A7D6F51008083BD /* JobMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobMainView.swift; sourceTree = "<group>"; };
+		0E2220FE2A7D7C98008083BD /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
 		0E25D10C2A6D41F600EF45B1 /* DesignModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignModifier.swift; sourceTree = "<group>"; };
 		0E26AE7B2A87D2BD00874903 /* UserAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPIManager.swift; sourceTree = "<group>"; };
 		0E3C2C3E2AB590980083EABF /* UserOB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOB.swift; sourceTree = "<group>"; };
@@ -63,12 +58,15 @@
 		0E6AE28C2A63D53B008ADD83 /* CommunityHotPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityHotPostView.swift; sourceTree = "<group>"; };
 		0E6AE28E2A6ABB7B008ADD83 /* CommunityMyPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityMyPostView.swift; sourceTree = "<group>"; };
 		0E6AE2922A6ABE00008ADD83 /* CommunityCreatePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityCreatePostView.swift; sourceTree = "<group>"; };
+		0E6DE2F32A7E1C52003B746D /* JobPostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobPostDetailView.swift; sourceTree = "<group>"; };
 		0E71327B2A47E7CA0003306C /* Hey-Porori.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hey-Porori.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E71327E2A47E7CA0003306C /* Hey_PororiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hey_PororiApp.swift; sourceTree = "<group>"; };
 		0E7132822A47E7CB0003306C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E7132852A47E7CB0003306C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0E71328B2A47E7CC0003306C /* Hey-PororiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hey-PororiTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0E7132952A47E7CC0003306C /* Hey-PororiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hey-PororiUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E89AB7A2AAF6F3600D776D7 /* JobProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobProfileView.swift; sourceTree = "<group>"; };
+		0E89AB7C2AB0A58600D776D7 /* JobApplyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobApplyListView.swift; sourceTree = "<group>"; };
+		0E8BF85C2A9B265000AAB263 /* JobCreatePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCreatePostView.swift; sourceTree = "<group>"; };
+		0EA2B2D92AA758FC00C8D5A9 /* JobPostFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobPostFilterView.swift; sourceTree = "<group>"; };
 		0EBE7D602A7C9C0000ACE2A1 /* TextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExtension.swift; sourceTree = "<group>"; };
 		0EDBCE162AB0B4BE00B02DCF /* APIURL.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIURL.plist; sourceTree = "<group>"; };
 		0EE95D732A605940005B9E16 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
@@ -100,17 +98,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E9D99602A9B504E0092F722 /* Flow in Frameworks */,
+				0E9D99622A9B504E0092F722 /* Renderer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0E2220FB2A742740008083BD /* New Group */ = {
+		0E2220FB2A742740008083BD /* Job */ = {
 			isa = PBXGroup;
 			children = (
+				0E2220FC2A7D6F51008083BD /* JobMainView.swift */,
+				0E6DE2F32A7E1C52003B746D /* JobPostDetailView.swift */,
+				0E8BF85C2A9B265000AAB263 /* JobCreatePostView.swift */,
+				0EA2B2D92AA758FC00C8D5A9 /* JobPostFilterView.swift */,
+				0E89AB7A2AAF6F3600D776D7 /* JobProfileView.swift */,
+				0E89AB7C2AB0A58600D776D7 /* JobApplyListView.swift */,
 			);
-			path = "New Group";
+			path = Job;
 			sourceTree = "<group>";
 		};
 		0E26AE7A2A87D29100874903 /* API */ = {
@@ -164,8 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				0E71327B2A47E7CA0003306C /* Hey-Porori.app */,
-				0E71328B2A47E7CC0003306C /* Hey-PororiTests.xctest */,
-				0E7132952A47E7CC0003306C /* Hey-PororiUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -176,12 +180,13 @@
 				0E3C2C3D2AB590380083EABF /* Observables */,
 				0E26AE7A2A87D29100874903 /* API */,
 				0E439CDE2A7FF7D800EA7CA5 /* Hey-Porori.entitlements */,
-				0E2220FB2A742740008083BD /* New Group */,
 				0EBE7D5F2A7C9BF200ACE2A1 /* Extensions */,
+				0E2220FB2A742740008083BD /* Job */,
 				0E6AE2832A62D8E2008ADD83 /* Community */,
 				0E6AE2802A62D6AC008ADD83 /* Constants */,
 				0E439CDC2A7FF7D800EA7CA5 /* LoginView.swift */,
 				0E6AE2842A62D957008ADD83 /* MainTabView.swift */,
+				0E2220FE2A7D7C98008083BD /* Components.swift */,
 				0E71327E2A47E7CA0003306C /* Hey_PororiApp.swift */,
 				0E7132822A47E7CB0003306C /* Assets.xcassets */,
 				0E7132842A47E7CB0003306C /* Preview Content */,
@@ -230,46 +235,12 @@
 				0EDBCE102AB0B42600B02DCF /* Moya */,
 				0EDBCE122AB0B42600B02DCF /* ReactiveMoya */,
 				0EDBCE142AB0B42600B02DCF /* RxMoya */,
+				0E9D995F2A9B504E0092F722 /* Flow */,
+				0E9D99612A9B504E0092F722 /* Renderer */,
 			);
 			productName = "Hey-Porori";
 			productReference = 0E71327B2A47E7CA0003306C /* Hey-Porori.app */;
 			productType = "com.apple.product-type.application";
-		};
-		0E71328A2A47E7CC0003306C /* Hey-PororiTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0E7132A22A47E7CC0003306C /* Build configuration list for PBXNativeTarget "Hey-PororiTests" */;
-			buildPhases = (
-				0E7132872A47E7CC0003306C /* Sources */,
-				0E7132882A47E7CC0003306C /* Frameworks */,
-				0E7132892A47E7CC0003306C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0E71328D2A47E7CC0003306C /* PBXTargetDependency */,
-			);
-			name = "Hey-PororiTests";
-			productName = "Hey-PororiTests";
-			productReference = 0E71328B2A47E7CC0003306C /* Hey-PororiTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		0E7132942A47E7CC0003306C /* Hey-PororiUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0E7132A52A47E7CC0003306C /* Build configuration list for PBXNativeTarget "Hey-PororiUITests" */;
-			buildPhases = (
-				0E7132912A47E7CC0003306C /* Sources */,
-				0E7132922A47E7CC0003306C /* Frameworks */,
-				0E7132932A47E7CC0003306C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0E7132972A47E7CC0003306C /* PBXTargetDependency */,
-			);
-			name = "Hey-PororiUITests";
-			productName = "Hey-PororiUITests";
-			productReference = 0E7132952A47E7CC0003306C /* Hey-PororiUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -283,14 +254,6 @@
 				TargetAttributes = {
 					0E71327A2A47E7CA0003306C = {
 						CreatedOnToolsVersion = 14.3.1;
-					};
-					0E71328A2A47E7CC0003306C = {
-						CreatedOnToolsVersion = 14.3.1;
-						TestTargetID = 0E71327A2A47E7CA0003306C;
-					};
-					0E7132942A47E7CC0003306C = {
-						CreatedOnToolsVersion = 14.3.1;
-						TestTargetID = 0E71327A2A47E7CA0003306C;
 					};
 				};
 			};
@@ -306,14 +269,14 @@
 			packageReferences = (
 				0E26AE772A87792600874903 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				0EDBCE0D2AB0B42600B02DCF /* XCRemoteSwiftPackageReference "Moya" */,
+				0E9D995E2A9B504E0092F722 /* XCRemoteSwiftPackageReference "SwiftUI-Flow" */,
+
 			);
 			productRefGroup = 0E71327C2A47E7CA0003306C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				0E71327A2A47E7CA0003306C /* Hey-Porori */,
-				0E71328A2A47E7CC0003306C /* Hey-PororiTests */,
-				0E7132942A47E7CC0003306C /* Hey-PororiUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -342,6 +305,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E8BF8612A9B2C7700AAB263 /* .pre-commit-config.yaml in Resources */,
+				0E8BF8622A9B2C7700AAB263 /* .swiftlint.yml in Resources */,
+				0E8BF8632A9B2C7700AAB263 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,50 +340,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E6AE2822A62D6BE008ADD83 /* Colors.swift in Sources */,
+				0E2220FF2A7D7C98008083BD /* Components.swift in Sources */,
 				0EBE7D612A7C9C0000ACE2A1 /* TextExtension.swift in Sources */,
 				0EEA36F32A88AE890034C024 /* BundleExtension.swift in Sources */,
 				0E6AE2852A62D957008ADD83 /* MainTabView.swift in Sources */,
 				0E26AE7C2A87D2BD00874903 /* UserAPIManager.swift in Sources */,
 				0E6AE2932A6ABE00008ADD83 /* CommunityCreatePostView.swift in Sources */,
 				0E25D10D2A6D41F600EF45B1 /* DesignModifier.swift in Sources */,
+				0E89AB7B2AAF6F3600D776D7 /* JobProfileView.swift in Sources */,
 				0E6AE28B2A63CB0C008ADD83 /* CommunityMapView.swift in Sources */,
+				0EA2B2DA2AA758FC00C8D5A9 /* JobPostFilterView.swift in Sources */,
 				0E71327F2A47E7CA0003306C /* Hey_PororiApp.swift in Sources */,
+				0E89AB7D2AB0A58600D776D7 /* JobApplyListView.swift in Sources */,
+				0E6DE2F42A7E1C52003B746D /* JobPostDetailView.swift in Sources */,
 				0E6AE28D2A63D53B008ADD83 /* CommunityHotPostView.swift in Sources */,
 				0E439CDD2A7FF7D800EA7CA5 /* LoginView.swift in Sources */,
+				0E2220FD2A7D6F51008083BD /* JobMainView.swift in Sources */,
 				0E6AE28F2A6ABB7B008ADD83 /* CommunityMyPostView.swift in Sources */,
+				0E8BF85D2A9B265000AAB263 /* JobCreatePostView.swift in Sources */,
 				0E6AE2872A62DAEE008ADD83 /* CommunityMainView.swift in Sources */,
 				0E3C2C3F2AB590980083EABF /* UserOB.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0E7132872A47E7CC0003306C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0E7132912A47E7CC0003306C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		0E71328D2A47E7CC0003306C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0E71327A2A47E7CA0003306C /* Hey-Porori */;
-			targetProxy = 0E71328C2A47E7CC0003306C /* PBXContainerItemProxy */;
-		};
-		0E7132972A47E7CC0003306C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0E71327A2A47E7CA0003306C /* Hey-Porori */;
-			targetProxy = 0E7132962A47E7CC0003306C /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0E71329D2A47E7CC0003306C /* Debug */ = {
@@ -594,82 +540,6 @@
 			};
 			name = Release;
 		};
-		0E7132A32A47E7CC0003306C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PAQ92DM7XD;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Locariya.Hey-PororiTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hey-Porori.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Hey-Porori";
-			};
-			name = Debug;
-		};
-		0E7132A42A47E7CC0003306C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PAQ92DM7XD;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Locariya.Hey-PororiTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hey-Porori.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Hey-Porori";
-			};
-			name = Release;
-		};
-		0E7132A62A47E7CC0003306C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PAQ92DM7XD;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Locariya.Hey-PororiUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Hey-Porori";
-			};
-			name = Debug;
-		};
-		0E7132A72A47E7CC0003306C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PAQ92DM7XD;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Locariya.Hey-PororiUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Hey-Porori";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -691,24 +561,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0E7132A22A47E7CC0003306C /* Build configuration list for PBXNativeTarget "Hey-PororiTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0E7132A32A47E7CC0003306C /* Debug */,
-				0E7132A42A47E7CC0003306C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0E7132A52A47E7CC0003306C /* Build configuration list for PBXNativeTarget "Hey-PororiUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0E7132A62A47E7CC0003306C /* Debug */,
-				0E7132A72A47E7CC0003306C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -726,6 +578,12 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 15.0.0;
+		0E9D995E2A9B504E0092F722 /* XCRemoteSwiftPackageReference "SwiftUI-Flow" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tevelee/SwiftUI-Flow.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -755,6 +613,15 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0EDBCE0D2AB0B42600B02DCF /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = RxMoya;
+		0E9D995F2A9B504E0092F722 /* Flow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0E9D995E2A9B504E0092F722 /* XCRemoteSwiftPackageReference "SwiftUI-Flow" */;
+			productName = Flow;
+		};
+		0E9D99612A9B504E0092F722 /* Renderer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0E9D995E2A9B504E0092F722 /* XCRemoteSwiftPackageReference "SwiftUI-Flow" */;
+			productName = Renderer;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
