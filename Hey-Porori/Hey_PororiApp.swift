@@ -9,15 +9,9 @@ import SwiftUI
 
 @main
 struct HeyPororiApp: App {
-    @StateObject var userData = UserData()
-    
     var body: some Scene {
         WindowGroup {
-            if userData.accessToken.isEmpty {
-                LoginView().environmentObject(userData)
-            } else {
-                MainTabView()
-            }
+            MainTabView()
         }
     }
 }
