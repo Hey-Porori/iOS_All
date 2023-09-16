@@ -10,6 +10,9 @@
 		0E2220FD2A7D6F51008083BD /* JobMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2220FC2A7D6F51008083BD /* JobMainView.swift */; };
 		0E2220FF2A7D7C98008083BD /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2220FE2A7D7C98008083BD /* Components.swift */; };
 		0E25D10D2A6D41F600EF45B1 /* DesignModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E25D10C2A6D41F600EF45B1 /* DesignModifier.swift */; };
+		0E26AE7C2A87D2BD00874903 /* UserAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E26AE7B2A87D2BD00874903 /* UserAPIManager.swift */; };
+		0E3C2C3F2AB590980083EABF /* UserOB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3C2C3E2AB590980083EABF /* UserOB.swift */; };
+		0E439CDD2A7FF7D800EA7CA5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E439CDC2A7FF7D800EA7CA5 /* LoginView.swift */; };
 		0E6AE2822A62D6BE008ADD83 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6AE2812A62D6BE008ADD83 /* Colors.swift */; };
 		0E6AE2852A62D957008ADD83 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6AE2842A62D957008ADD83 /* MainTabView.swift */; };
 		0E6AE2872A62DAEE008ADD83 /* CommunityMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6AE2862A62DAEE008ADD83 /* CommunityMainView.swift */; };
@@ -22,17 +25,23 @@
 		0E89AB7B2AAF6F3600D776D7 /* JobProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E89AB7A2AAF6F3600D776D7 /* JobProfileView.swift */; };
 		0E89AB7D2AB0A58600D776D7 /* JobApplyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E89AB7C2AB0A58600D776D7 /* JobApplyListView.swift */; };
 		0E8BF85D2A9B265000AAB263 /* JobCreatePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8BF85C2A9B265000AAB263 /* JobCreatePostView.swift */; };
-		0E8BF8612A9B2C7700AAB263 /* .pre-commit-config.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 0EE95D752A60597D005B9E16 /* .pre-commit-config.yaml */; };
-		0E8BF8622A9B2C7700AAB263 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 0EE95D732A605940005B9E16 /* .swiftlint.yml */; };
 		0E8BF8632A9B2C7700AAB263 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E7132822A47E7CB0003306C /* Assets.xcassets */; };
 		0EA2B2DA2AA758FC00C8D5A9 /* JobPostFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA2B2D92AA758FC00C8D5A9 /* JobPostFilterView.swift */; };
 		0EBE7D612A7C9C0000ACE2A1 /* TextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBE7D602A7C9C0000ACE2A1 /* TextExtension.swift */; };
+		0EDBCE172AB0B4BE00B02DCF /* APIURL.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0EDBCE162AB0B4BE00B02DCF /* APIURL.plist */; };
+		0EE95D742A605940005B9E16 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 0EE95D732A605940005B9E16 /* .swiftlint.yml */; };
+		0EE95D762A60597D005B9E16 /* .pre-commit-config.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 0EE95D752A60597D005B9E16 /* .pre-commit-config.yaml */; };
+		0EEA36F32A88AE890034C024 /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEA36F22A88AE890034C024 /* BundleExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0E2220FC2A7D6F51008083BD /* JobMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobMainView.swift; sourceTree = "<group>"; };
 		0E2220FE2A7D7C98008083BD /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
 		0E25D10C2A6D41F600EF45B1 /* DesignModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignModifier.swift; sourceTree = "<group>"; };
+		0E26AE7B2A87D2BD00874903 /* UserAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPIManager.swift; sourceTree = "<group>"; };
+		0E3C2C3E2AB590980083EABF /* UserOB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOB.swift; sourceTree = "<group>"; };
+		0E439CDC2A7FF7D800EA7CA5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		0E439CDE2A7FF7D800EA7CA5 /* Hey-Porori.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Hey-Porori.entitlements"; sourceTree = "<group>"; };
 		0E6AE2812A62D6BE008ADD83 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		0E6AE2842A62D957008ADD83 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		0E6AE2862A62DAEE008ADD83 /* CommunityMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityMainView.swift; sourceTree = "<group>"; };
@@ -50,8 +59,10 @@
 		0E8BF85C2A9B265000AAB263 /* JobCreatePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCreatePostView.swift; sourceTree = "<group>"; };
 		0EA2B2D92AA758FC00C8D5A9 /* JobPostFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobPostFilterView.swift; sourceTree = "<group>"; };
 		0EBE7D602A7C9C0000ACE2A1 /* TextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExtension.swift; sourceTree = "<group>"; };
+		0EDBCE162AB0B4BE00B02DCF /* APIURL.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIURL.plist; sourceTree = "<group>"; };
 		0EE95D732A605940005B9E16 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		0EE95D752A60597D005B9E16 /* .pre-commit-config.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = ".pre-commit-config.yaml"; sourceTree = "<group>"; };
+		0EEA36F22A88AE890034C024 /* BundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +87,21 @@
 				0E89AB7C2AB0A58600D776D7 /* JobApplyListView.swift */,
 			);
 			path = Job;
+		0E26AE7A2A87D29100874903 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				0E26AE7B2A87D2BD00874903 /* UserAPIManager.swift */,
+				0EDBCE162AB0B4BE00B02DCF /* APIURL.plist */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		0E3C2C3D2AB590380083EABF /* Observables */ = {
+			isa = PBXGroup;
+			children = (
+				0E3C2C3E2AB590980083EABF /* UserOB.swift */,
+			);
+			path = Observables;
 			sourceTree = "<group>";
 		};
 		0E6AE2802A62D6AC008ADD83 /* Constants */ = {
@@ -119,10 +145,14 @@
 		0E71327D2A47E7CA0003306C /* Hey-Porori */ = {
 			isa = PBXGroup;
 			children = (
+				0E3C2C3D2AB590380083EABF /* Observables */,
+				0E26AE7A2A87D29100874903 /* API */,
+				0E439CDE2A7FF7D800EA7CA5 /* Hey-Porori.entitlements */,
 				0EBE7D5F2A7C9BF200ACE2A1 /* Extensions */,
 				0E2220FB2A742740008083BD /* Job */,
 				0E6AE2832A62D8E2008ADD83 /* Community */,
 				0E6AE2802A62D6AC008ADD83 /* Constants */,
+				0E439CDC2A7FF7D800EA7CA5 /* LoginView.swift */,
 				0E6AE2842A62D957008ADD83 /* MainTabView.swift */,
 				0E2220FE2A7D7C98008083BD /* Components.swift */,
 				0E71327E2A47E7CA0003306C /* Hey_PororiApp.swift */,
@@ -145,6 +175,7 @@
 			children = (
 				0EBE7D602A7C9C0000ACE2A1 /* TextExtension.swift */,
 				0E25D10C2A6D41F600EF45B1 /* DesignModifier.swift */,
+				0EEA36F22A88AE890034C024 /* BundleExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -212,9 +243,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E8BF8612A9B2C7700AAB263 /* .pre-commit-config.yaml in Resources */,
-				0E8BF8622A9B2C7700AAB263 /* .swiftlint.yml in Resources */,
 				0E8BF8632A9B2C7700AAB263 /* Assets.xcassets in Resources */,
+				0EE95D742A605940005B9E16 /* .swiftlint.yml in Resources */,
+				0E7132862A47E7CB0003306C /* Preview Assets.xcassets in Resources */,
+				0EE95D762A60597D005B9E16 /* .pre-commit-config.yaml in Resources */,
+				0EDBCE172AB0B4BE00B02DCF /* APIURL.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E7132892A47E7CC0003306C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E7132932A47E7CC0003306C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,7 +296,9 @@
 				0E6AE2822A62D6BE008ADD83 /* Colors.swift in Sources */,
 				0E2220FF2A7D7C98008083BD /* Components.swift in Sources */,
 				0EBE7D612A7C9C0000ACE2A1 /* TextExtension.swift in Sources */,
+				0EEA36F32A88AE890034C024 /* BundleExtension.swift in Sources */,
 				0E6AE2852A62D957008ADD83 /* MainTabView.swift in Sources */,
+				0E26AE7C2A87D2BD00874903 /* UserAPIManager.swift in Sources */,
 				0E6AE2932A6ABE00008ADD83 /* CommunityCreatePostView.swift in Sources */,
 				0E25D10D2A6D41F600EF45B1 /* DesignModifier.swift in Sources */,
 				0E89AB7B2AAF6F3600D776D7 /* JobProfileView.swift in Sources */,
@@ -260,9 +309,11 @@
 				0E6DE2F42A7E1C52003B746D /* JobPostDetailView.swift in Sources */,
 				0E6AE28D2A63D53B008ADD83 /* CommunityHotPostView.swift in Sources */,
 				0E2220FD2A7D6F51008083BD /* JobMainView.swift in Sources */,
+				0E439CDD2A7FF7D800EA7CA5 /* LoginView.swift in Sources */,
 				0E6AE28F2A6ABB7B008ADD83 /* CommunityMyPostView.swift in Sources */,
 				0E8BF85D2A9B265000AAB263 /* JobCreatePostView.swift in Sources */,
 				0E6AE2872A62DAEE008ADD83 /* CommunityMainView.swift in Sources */,
+				0E3C2C3F2AB590980083EABF /* UserOB.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +439,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Hey-Porori/Hey-Porori.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Hey-Porori/Preview Content\"";
@@ -417,6 +469,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Hey-Porori/Hey-Porori.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Hey-Porori/Preview Content\"";
