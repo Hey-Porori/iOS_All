@@ -19,7 +19,7 @@ struct CommunityMapView: View {
     var body: some View {
             VStack {
                 // MARK: 커뮤니티 맵 뷰 검색 바
-                SearchTextBox(placeholder: "게시글 제목, 내용, 태그, 닉네임으로 검색", searchText: $searchText)
+                CommunitySearchTextBox(placeholder: "게시글 제목, 내용, 태그, 닉네임으로 검색", searchText: $searchText)
                 .padding(.horizontal, 22)
                 
                 Spacer()

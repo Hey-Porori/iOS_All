@@ -76,7 +76,7 @@ struct JobMainView: View {
             }
             
             // MARK: 서치 바
-            SearchTextBox(placeholder: "제목 등으로 검색하세요", searchText: $searchText)
+            DefaultSearchTextBox(placeholder: "제목 등으로 검색하세요", searchText: $searchText)
             
             // MARK: 태그 필터
             HStack {

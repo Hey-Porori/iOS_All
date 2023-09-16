@@ -8,10 +8,14 @@
 import SwiftUI
 
 struct MainTabView: View {
+    init() {
+        UITabBar.appearance().isTranslucent = true
+        UITabBar.appearance().backgroundColor = .white
+    }
     var body: some View {
         NavigationStack {
             TabView {
-                JobMainView()
+                TradeMainView()
                     .tabItem {
                         Label("알바", systemImage: "latch.2.case.fill")
                     }

@@ -27,9 +27,12 @@ extension Color {
     static let dividerGray = Color(hex: "#D9D9D9")
     static let buttonlightGray = Color(hex: "#F5F5F5")
     
+    static let searchBarGray = Color(hex: "#767680").opacity(0.12)
+    
     // MARK: Other Colors
     static let lightYellow = Color(hex: "#FFD976")
     static let lightOrange = Color(hex: "#FF722D")
+    static let pink = Color(hex: "#F67C7C")
 }
  
 extension Color {

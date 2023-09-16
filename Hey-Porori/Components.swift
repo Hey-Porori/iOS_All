@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SearchTextBox: View {
+struct CommunitySearchTextBox: View {
     let placeholder: String
     @Binding var searchText: String
     
@@ -28,6 +28,28 @@ struct SearchTextBox: View {
         }
     }
 }
+
+struct DefaultSearchTextBox: View {
+    let placeholder: String
+    @Binding var searchText: String
+    
+    var body: some View {
+        HStack {
+            TextField(placeholder, text: $searchText)
+                .font(Font(.size14))
+                .padding(.leading, 10)
+                .padding(.vertical, 8)
+            Image(systemName: "magnifyingglass")
+                .foregroundColor(.lightGray)
+                .font(.system(size: TextSize.size24.rawValue))
+                .padding(5)
+        }.background {
+            RoundedRectangle(cornerRadius: 10)
+                .fill(Color.searchBarGray)
+        }
+    }
+}
+
 
 /// return the Default Header. It have Title of Header and back button(x)
 ///
