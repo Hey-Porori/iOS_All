@@ -18,14 +18,18 @@ extension Color {
     static let darkBlue = Color(hex: "#6094DA")
     
     // MARK: Gray Colors
+    static let black = Color(hex: "#353535")
     static let darkGray = Color(hex: "#666666")
     static let gray = Color(hex: "#999999")
     static let lightGray = Color(hex: "#CCCCCC")
     
     static let shadowGray = Color(.black).opacity(0.25)
+    static let dividerGray = Color(hex: "#D9D9D9")
+    static let buttonlightGray = Color(hex: "#F5F5F5")
     
     // MARK: Other Colors
     static let lightYellow = Color(hex: "#FFD976")
+    static let lightOrange = Color(hex: "#FF722D")
 }
  
 extension Color {
