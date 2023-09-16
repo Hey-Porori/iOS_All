@@ -39,6 +39,7 @@
 		0EBE7D612A7C9C0000ACE2A1 /* TextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBE7D602A7C9C0000ACE2A1 /* TextExtension.swift */; };
 		0EC1FD7F2AB5E34E00E7EEF3 /* Flow in Frameworks */ = {isa = PBXBuildFile; productRef = 0EC1FD7E2AB5E34E00E7EEF3 /* Flow */; };
 		0EC1FD812AB5E34E00E7EEF3 /* Renderer in Frameworks */ = {isa = PBXBuildFile; productRef = 0EC1FD802AB5E34E00E7EEF3 /* Renderer */; };
+		0EC1FD842AB5F48C00E7EEF3 /* TradeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC1FD832AB5F48C00E7EEF3 /* TradeMainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		0E8BF85C2A9B265000AAB263 /* JobCreatePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCreatePostView.swift; sourceTree = "<group>"; };
 		0EA2B2D92AA758FC00C8D5A9 /* JobPostFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobPostFilterView.swift; sourceTree = "<group>"; };
 		0EBE7D602A7C9C0000ACE2A1 /* TextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExtension.swift; sourceTree = "<group>"; };
+		0EC1FD832AB5F48C00E7EEF3 /* TradeMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeMainView.swift; sourceTree = "<group>"; };
 		0EE95D732A605940005B9E16 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		0EE95D752A60597D005B9E16 /* .pre-commit-config.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = ".pre-commit-config.yaml"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -161,6 +163,7 @@
 		0E71327D2A47E7CA0003306C /* Hey-Porori */ = {
 			isa = PBXGroup;
 			children = (
+				0EC1FD822AB5F47D00E7EEF3 /* Trade */,
 				0E2D67A22AB5DDF0006CF89D /* Observables */,
 				0E2D67922AB5DDF0006CF89D /* API */,
 				0E2D678C2AB5DDF0006CF89D /* Hey-Porori.entitlements */,
@@ -194,6 +197,14 @@
 				0E2D67972AB5DDF0006CF89D /* BundleExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0EC1FD822AB5F47D00E7EEF3 /* Trade */ = {
+			isa = PBXGroup;
+			children = (
+				0EC1FD832AB5F48C00E7EEF3 /* TradeMainView.swift */,
+			);
+			path = Trade;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,6 +327,7 @@
 				0E6AE28B2A63CB0C008ADD83 /* CommunityMapView.swift in Sources */,
 				0EA2B2DA2AA758FC00C8D5A9 /* JobPostFilterView.swift in Sources */,
 				0E71327F2A47E7CA0003306C /* Hey_PororiApp.swift in Sources */,
+				0EC1FD842AB5F48C00E7EEF3 /* TradeMainView.swift in Sources */,
 				0E89AB7D2AB0A58600D776D7 /* JobApplyListView.swift in Sources */,
 				0E6DE2F42A7E1C52003B746D /* JobPostDetailView.swift in Sources */,
 				0E2D678E2AB5DDF0006CF89D /* LoginView.swift in Sources */,

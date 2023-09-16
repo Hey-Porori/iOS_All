@@ -13,15 +13,15 @@ struct MainTabView: View {
             TabView {
                 JobMainView()
                     .tabItem {
-                        Label("알바", systemImage: "person")
+                        Label("알바", systemImage: "latch.2.case.fill")
                     }
                 CommunityMainView()
                     .tabItem {
-                        Label("커뮤니티", systemImage: "person")
+                        Label("커뮤니티", systemImage: "person.3.fill")
                     }
-                CommunityMainView()
+                TradeMainView()
                     .tabItem {
-                        Label("사용자", systemImage: "person")
+                        Label("중고거래", systemImage: "arrow.2.squarepath")
                     }
             }
         }

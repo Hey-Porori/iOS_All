@@ -16,4 +16,12 @@ extension Bundle {
         
         return url
     }
+    
+    var testAccessToken: String {
+        guard let filePath = self.path(forResource: "APIURL", ofType: "plist") else { return "" }
+        guard let source = NSDictionary(contentsOfFile: filePath) else { return "" }
+        guard let url = source["testAccessToken"] as? String else { fatalError("token fetch error") }
+        
+        return url
+    }
 }

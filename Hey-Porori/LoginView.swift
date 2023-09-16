@@ -42,6 +42,20 @@ struct LoginView: View {
                 print(error.localizedDescription)
                 print("error")
             }
+        }.onAppear {
+            let token = Bundle.main.testAccessToken
+            let param = userAdditionalInfoBody(accessToken: token, address: "서대문구 세무서길 141-12", email: "jm10123@gmail.com", gender: false, imageUrl: "1231", name: "김민수", nickName: "민수민수", phoneNumber: "010-1234-5678")
+            // TODO: 테스트용 데이터. 추후 삭제 요망.
+            DispatchQueue.main.async {
+                userData.accessToken = param.accessToken
+                userData.address = param.address
+                userData.email = param.email
+                userData.gender = param.gender
+                userData.imageUrl = param.imageUrl
+                userData.name = param.name
+                userData.nickName = param.nickName
+                userData.phoneNumber = param.phoneNumber
+            }
         }
     }
 }
