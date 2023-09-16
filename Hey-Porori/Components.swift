@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SearchTextBox: View {
+struct CommunitySearchTextBox: View {
     let placeholder: String
     @Binding var searchText: String
     
@@ -28,6 +28,28 @@ struct SearchTextBox: View {
         }
     }
 }
+
+struct DefaultSearchTextBox: View {
+    let placeholder: String
+    @Binding var searchText: String
+    
+    var body: some View {
+        HStack {
+            TextField(placeholder, text: $searchText)
+                .font(Font(.size14))
+                .padding(.leading, 10)
+                .padding(.vertical, 8)
+            Image(systemName: "magnifyingglass")
+                .foregroundColor(.lightGray)
+                .font(.system(size: TextSize.size24.rawValue))
+                .padding(5)
+        }.background {
+            RoundedRectangle(cornerRadius: 10)
+                .fill(Color.searchBarGray)
+        }
+    }
+}
+
 
 /// return the Default Header. It have Title of Header and back button(x)
 ///
@@ -84,6 +106,35 @@ func rightButtonHeaderView(headerText: String, isViewPresented: Binding<Bool>, r
             }
         }
     }.padding(.horizontal, 13).padding(.top, 5)
+}
+
+/// NavigationLink & NaviagtionDestination을 이용한 여러 네비게이팅을 한 번에 생성했을 때, 안쪽 view에서 사용.
+///
+/// - Parameters:
+///   - headerText: Title text of Header
+/// - Returns: Header View with Title and Back button.
+struct DefaultHeaderViewWithArray: View {
+    let headerText: String
+    @Environment(\.presentationMode) var presentationMode
+    
+    var body: some View {
+        HStack {
+            ZStack {
+                Text(headerText).foregroundColor(.darkGray)
+                    .font(.system(size: 19, weight: .bold))
+                HStack {
+                    Button {
+                        presentationMode.wrappedValue.dismiss()
+                    } label: {
+                        Image(systemName: "xmark")
+                            .font(.system(size: 20, weight: .bold))
+                            .foregroundColor(.darkGray)
+                    }
+                    Spacer()
+                }
+            }
+        }.padding(.horizontal, 13).padding(.top, 5)
+    }
 }
 
 
