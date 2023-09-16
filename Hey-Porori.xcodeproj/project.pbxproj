@@ -40,6 +40,7 @@
 		0EC1FD7F2AB5E34E00E7EEF3 /* Flow in Frameworks */ = {isa = PBXBuildFile; productRef = 0EC1FD7E2AB5E34E00E7EEF3 /* Flow */; };
 		0EC1FD812AB5E34E00E7EEF3 /* Renderer in Frameworks */ = {isa = PBXBuildFile; productRef = 0EC1FD802AB5E34E00E7EEF3 /* Renderer */; };
 		0EC1FD842AB5F48C00E7EEF3 /* TradeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC1FD832AB5F48C00E7EEF3 /* TradeMainView.swift */; };
+		0EC1FD862AB6198500E7EEF3 /* TradePostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC1FD852AB6198500E7EEF3 /* TradePostDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		0EA2B2D92AA758FC00C8D5A9 /* JobPostFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobPostFilterView.swift; sourceTree = "<group>"; };
 		0EBE7D602A7C9C0000ACE2A1 /* TextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExtension.swift; sourceTree = "<group>"; };
 		0EC1FD832AB5F48C00E7EEF3 /* TradeMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeMainView.swift; sourceTree = "<group>"; };
+		0EC1FD852AB6198500E7EEF3 /* TradePostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradePostDetailView.swift; sourceTree = "<group>"; };
 		0EE95D732A605940005B9E16 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		0EE95D752A60597D005B9E16 /* .pre-commit-config.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = ".pre-commit-config.yaml"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -203,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				0EC1FD832AB5F48C00E7EEF3 /* TradeMainView.swift */,
+				0EC1FD852AB6198500E7EEF3 /* TradePostDetailView.swift */,
 			);
 			path = Trade;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				0E2220FD2A7D6F51008083BD /* JobMainView.swift in Sources */,
 				0E6AE28F2A6ABB7B008ADD83 /* CommunityMyPostView.swift in Sources */,
 				0E8BF85D2A9B265000AAB263 /* JobCreatePostView.swift in Sources */,
+				0EC1FD862AB6198500E7EEF3 /* TradePostDetailView.swift in Sources */,
 				0E6AE2872A62DAEE008ADD83 /* CommunityMainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

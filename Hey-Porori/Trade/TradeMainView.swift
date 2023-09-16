@@ -71,34 +71,38 @@ struct TradeMainView: View {
             
             ScrollView(showsIndicators: false) {
                 LazyVGrid(columns: columns) {
-                    ForEach(gridData, id: \.self) {data in
-                        VStack {
-                            Image("dummyImage")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .background(.blue)
-                                .clipShape(RoundedRectangle(cornerRadius: 15))
-                            HStack {
-                                Image(systemName: "heart.fill")
-                                    .font(Font(.size16))
-                                    .foregroundColor(.pink)
-                                Text("12")
-                                    .foregroundColor(.pink)
-                                    .defaultStyle_Bold(size: .size14)
-                                Spacer()
-                                Text("필동")
-                                    .defaultGrayStyle_Bold(size: .size14)
-                                    .padding(.horizontal, 8)
-                                    .padding(.vertical, 2)
-                                    .background {
-                                        RoundedRectangle(cornerRadius: 5)
-                                            .fill(Color.dividerGray)
-                                    }
-                            }
-                            Text("\(data.title)")
-                                .defaultStyle(size: .size16)
-                        }.padding(.bottom, 20)
+                    ForEach(gridData, id: \.self) { data in
+                        NavigationLink(value: data) {
+                            VStack {
+                                Image("dummyImage")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .background(.blue)
+                                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                                HStack {
+                                    Image(systemName: "heart.fill")
+                                        .font(Font(.size16))
+                                        .foregroundColor(.pink)
+                                    Text("12")
+                                        .foregroundColor(.pink)
+                                        .defaultStyle_Bold(size: .size14)
+                                    Spacer()
+                                    Text("필동")
+                                        .defaultGrayStyle_Bold(size: .size14)
+                                        .padding(.horizontal, 8)
+                                        .padding(.vertical, 2)
+                                        .background {
+                                            RoundedRectangle(cornerRadius: 5)
+                                                .fill(Color.dividerGray)
+                                        }
+                                }
+                                Text("\(data.title)")
+                                    .defaultStyle(size: .size16)
+                            }.padding(.bottom, 20)
+                        }
                     }
+                }.navigationDestination(for: TradePostData.self) { postItem in
+                    TradePostDetailView(postData: postItem)
                 }
             }.padding(.horizontal, 25)
         }.onAppear {
