@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainTabView: View {
     init() {
+        // 탭바 투명해지지 않도록
         UITabBar.appearance().isTranslucent = true
         UITabBar.appearance().backgroundColor = .white
     }

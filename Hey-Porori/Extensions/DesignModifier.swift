@@ -87,6 +87,15 @@ extension TextField {
                 .stroke(Color.dividerGray, lineWidth: 2)
             )
     }
+    
+    func roundedGrayBackGround(HPad: CGFloat = 18, VPad: CGFloat = 14) -> some View {
+        self.padding(.horizontal, HPad)
+            .padding(.vertical, VPad)
+            .background(
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(Color.searchBarGray)
+            )
+    }
 }
 
 extension TextEditor {
@@ -123,6 +132,17 @@ extension TextEditor {
                 RoundedRectangle(cornerRadius: 5)
                 .inset(by: 1)
                 .stroke(Color.dividerGray, lineWidth: 1)
+            )
+    }
+    
+    func roundedGrayBackGround(HPad: CGFloat = 18, VPad: CGFloat = 14) -> some View {
+        self.padding(.horizontal, HPad)
+            .padding(.vertical, VPad)
+            .frame(minHeight: 200)
+            .scrollContentBackground(.hidden)
+            .background(
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(Color.searchBarGray)
             )
     }
 }

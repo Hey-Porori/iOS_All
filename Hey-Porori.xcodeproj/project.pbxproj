@@ -41,6 +41,7 @@
 		0EC1FD812AB5E34E00E7EEF3 /* Renderer in Frameworks */ = {isa = PBXBuildFile; productRef = 0EC1FD802AB5E34E00E7EEF3 /* Renderer */; };
 		0EC1FD842AB5F48C00E7EEF3 /* TradeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC1FD832AB5F48C00E7EEF3 /* TradeMainView.swift */; };
 		0EC1FD862AB6198500E7EEF3 /* TradePostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC1FD852AB6198500E7EEF3 /* TradePostDetailView.swift */; };
+		0EC1FD882AB6297500E7EEF3 /* TradeCreatePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC1FD872AB6297500E7EEF3 /* TradeCreatePostView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		0EBE7D602A7C9C0000ACE2A1 /* TextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExtension.swift; sourceTree = "<group>"; };
 		0EC1FD832AB5F48C00E7EEF3 /* TradeMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeMainView.swift; sourceTree = "<group>"; };
 		0EC1FD852AB6198500E7EEF3 /* TradePostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradePostDetailView.swift; sourceTree = "<group>"; };
+		0EC1FD872AB6297500E7EEF3 /* TradeCreatePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeCreatePostView.swift; sourceTree = "<group>"; };
 		0EE95D732A605940005B9E16 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		0EE95D752A60597D005B9E16 /* .pre-commit-config.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = ".pre-commit-config.yaml"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -206,6 +208,7 @@
 			children = (
 				0EC1FD832AB5F48C00E7EEF3 /* TradeMainView.swift */,
 				0EC1FD852AB6198500E7EEF3 /* TradePostDetailView.swift */,
+				0EC1FD872AB6297500E7EEF3 /* TradeCreatePostView.swift */,
 			);
 			path = Trade;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E6AE2822A62D6BE008ADD83 /* Colors.swift in Sources */,
+				0EC1FD882AB6297500E7EEF3 /* TradeCreatePostView.swift in Sources */,
 				0E2220FF2A7D7C98008083BD /* Components.swift in Sources */,
 				0EBE7D612A7C9C0000ACE2A1 /* TextExtension.swift in Sources */,
 				0E6AE2852A62D957008ADD83 /* MainTabView.swift in Sources */,
