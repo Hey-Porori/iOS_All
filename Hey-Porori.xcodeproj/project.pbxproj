@@ -29,8 +29,6 @@
 		0E8BF8612A9B2C7700AAB263 /* .pre-commit-config.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 0EE95D752A60597D005B9E16 /* .pre-commit-config.yaml */; };
 		0E8BF8622A9B2C7700AAB263 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 0EE95D732A605940005B9E16 /* .swiftlint.yml */; };
 		0E8BF8632A9B2C7700AAB263 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E7132822A47E7CB0003306C /* Assets.xcassets */; };
-		0E9D99602A9B504E0092F722 /* Flow in Frameworks */ = {isa = PBXBuildFile; productRef = 0E9D995F2A9B504E0092F722 /* Flow */; };
-		0E9D99622A9B504E0092F722 /* Renderer in Frameworks */ = {isa = PBXBuildFile; productRef = 0E9D99612A9B504E0092F722 /* Renderer */; };
 		0EA2B2DA2AA758FC00C8D5A9 /* JobPostFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA2B2D92AA758FC00C8D5A9 /* JobPostFilterView.swift */; };
 		0EBE7D612A7C9C0000ACE2A1 /* TextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBE7D602A7C9C0000ACE2A1 /* TextExtension.swift */; };
 		0EDBCE0F2AB0B42600B02DCF /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 0EDBCE0E2AB0B42600B02DCF /* CombineMoya */; };
@@ -529,7 +527,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
 /* Begin XCRemoteSwiftPackageReference section */
 		0E26AE772A87792600874903 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
