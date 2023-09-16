@@ -106,13 +106,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0E2220FB2A742740008083BD /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		0E26AE7A2A87D29100874903 /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,7 +169,6 @@
 				0E3C2C3D2AB590380083EABF /* Observables */,
 				0E26AE7A2A87D29100874903 /* API */,
 				0E439CDE2A7FF7D800EA7CA5 /* Hey-Porori.entitlements */,
-				0E2220FB2A742740008083BD /* New Group */,
 				0EBE7D5F2A7C9BF200ACE2A1 /* Extensions */,
 				0E6AE2832A62D8E2008ADD83 /* Community */,
 				0E6AE2802A62D6AC008ADD83 /* Constants */,
