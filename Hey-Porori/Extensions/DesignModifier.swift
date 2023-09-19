@@ -14,6 +14,13 @@ extension UIScreen {
    static let screenSize = UIScreen.main.bounds.size
 }
 
+extension Image {
+    func defaultHeaderIcon() -> some View {
+        self.font(Font(.size22))
+            .foregroundColor(.black)
+    }
+}
+
 extension View {
     func defaultShadow() -> some View {
         self.shadow(color: .shadowGray, radius: 2, y: 2)

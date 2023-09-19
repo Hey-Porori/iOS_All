@@ -63,7 +63,7 @@ struct ClubMainView: View {
                         }
                     }
                 }.navigationDestination(for: ClubData.self, destination: { clubData in
-                    ClubCommunityView()
+                    ClubCommunityView(clubData: clubData)
                 })
                 .padding(.top, 10)
             }.padding(.horizontal, 20)

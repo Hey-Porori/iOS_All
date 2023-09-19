@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct ClubCommunityView: View {
+    let clubData: ClubData
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct ClubCommunityView_Previews: PreviewProvider {
-    static var previews: some View {
-        ClubCommunityView()
+        VStack {
+            RightButtonHeaderViewWithArray(headerText: clubData.clubName) {
+                Button {
+                    // TODO: Club Exit
+                } label: {
+                    Image(systemName: "rectangle.portrait.and.arrow.right")
+                        .defaultHeaderIcon()
+                }
+            }
+        }
     }
 }
