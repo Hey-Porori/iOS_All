@@ -16,17 +16,21 @@ struct MainTabView: View {
     var body: some View {
         NavigationStack {
             TabView {
-                TradeMainView()
+                ClubMainView()
                     .tabItem {
-                        Label("알바", systemImage: "latch.2.case.fill")
-                    }
-                CommunityMainView()
-                    .tabItem {
-                        Label("커뮤니티", systemImage: "person.3.fill")
+                        Label("동호회", systemImage: "person.3.fill")
                     }
                 TradeMainView()
                     .tabItem {
                         Label("중고거래", systemImage: "arrow.2.squarepath")
+                    }
+                CommunityMainView()
+                    .tabItem {
+                        Label("커뮤니티", systemImage: "ellipsis.bubble.fill")
+                    }
+                JobMainView()
+                    .tabItem {
+                        Label("알바", systemImage: "latch.2.case.fill")
                     }
             }
         }
