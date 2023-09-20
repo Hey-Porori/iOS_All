@@ -137,6 +137,38 @@ struct DefaultHeaderViewWithArray: View {
     }
 }
 
+/// NavigationLink & NaviagtionDestination을 이용한 여러 네비게이팅을 한 번에 생성했을 때, 안쪽 view에서 사용.
+/// 그런데 이제 오른쪽 버튼도 곁들인.
+///
+/// - Parameters:
+///   - headerText: Title text of Header
+/// - Returns: Header View with Title and Back button.
+struct RightButtonHeaderViewWithArray<RightButtonContent: View>: View {
+    let headerText: String
+    let rightButtonContent: () -> RightButtonContent
+    @Environment(\.presentationMode) var presentationMode
+    
+    var body: some View {
+        HStack {
+            ZStack {
+                Text(headerText).foregroundColor(.darkGray)
+                    .font(.system(size: 19, weight: .bold))
+                HStack {
+                    Button {
+                        presentationMode.wrappedValue.dismiss()
+                    } label: {
+                        Image(systemName: "xmark")
+                            .font(.system(size: 20, weight: .bold))
+                            .foregroundColor(.darkGray)
+                    }
+                    Spacer()
+                    rightButtonContent()
+                }
+            }
+        }.padding(.horizontal, 13).padding(.top, 5)
+    }
+}
+
 
 /// 아르바이트(Job) 페이지에서,
 /// 알바공고 쓰기 (JobCreatePostView)와, 검색조건 설정(JobPostFilterView)에서 쓰이는 기본 View Section입니다.

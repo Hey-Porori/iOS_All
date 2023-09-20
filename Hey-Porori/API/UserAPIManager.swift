@@ -12,7 +12,7 @@ struct IdTokenBody: Encodable {
     var token: String
 }
 
-struct userAdditionalInfoBody: Encodable {
+struct UserAdditionalInfoBody: Encodable {
     var accessToken: String
     var address: String
     var email: String
@@ -61,7 +61,7 @@ final class UserAPIManager {
     func dummyRegister(token: String, userData: UserData) {
         let dummyResisterUrl = userUrl + "/api/users/additional-info"
         
-        let param = userAdditionalInfoBody(accessToken: token, address: "서대문구 세무서길 141-12", email: "jm10123@gmail.com", gender: false, imageUrl: "1231", name: "김민수", nickName: "민수민수", phoneNumber: "010-1234-5678")
+        let param = UserAdditionalInfoBody(accessToken: token, address: "서대문구 세무서길 141-12", email: "jm10123@gmail.com", gender: false, imageUrl: "1231", name: "김민수", nickName: "민수민수", phoneNumber: "010-1234-5678")
         let header: HTTPHeaders = ["Content-Type": "application/json", "Accept": "application/json"]
         
         AF.request(dummyResisterUrl, method: .put, parameters: param, encoder: JSONParameterEncoder.default, headers: header)

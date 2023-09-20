@@ -16,7 +16,7 @@ struct TradePostDetailView: View {
             DefaultHeaderViewWithArray(headerText: "게시글 상세")
             Divider().padding(.vertical, 5)
             
-            ScrollView(showsIndicators: false){
+            ScrollView(showsIndicators: false) {
                 VStack {
                     Image("dummyImage")
                         .resizable()
@@ -79,4 +79,3 @@ struct TradePostDetailView: View {
         }.toolbar(.hidden)
     }
 }
-

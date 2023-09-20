@@ -13,20 +13,33 @@ struct MainTabView: View {
         UITabBar.appearance().isTranslucent = true
         UITabBar.appearance().backgroundColor = .white
     }
+    
+    // Club Main View / Club Explore View
+    @State var isClubMainView: Bool = true
+    
     var body: some View {
         NavigationStack {
             TabView {
-                TradeMainView()
-                    .tabItem {
-                        Label("알바", systemImage: "latch.2.case.fill")
+                if isClubMainView {
+                    ClubMainView(isClubMainView: $isClubMainView).tabItem {
+                        Label("동호회", systemImage: "person.3.fill")
                     }
-                CommunityMainView()
-                    .tabItem {
-                        Label("커뮤니티", systemImage: "person.3.fill")
+                } else {
+                    ClubExploreView(isClubMainView: $isClubMainView).tabItem {
+                        Label("동호회", systemImage: "person.3.fill")
                     }
+                }
                 TradeMainView()
                     .tabItem {
                         Label("중고거래", systemImage: "arrow.2.squarepath")
+                    }
+                CommunityMainView()
+                    .tabItem {
+                        Label("커뮤니티", systemImage: "ellipsis.bubble.fill")
+                    }
+                JobMainView()
+                    .tabItem {
+                        Label("알바", systemImage: "latch.2.case.fill")
                     }
             }
         }

@@ -8,10 +8,17 @@
 import SwiftUI
 
 /// Screen's Width and Height.
-extension UIScreen{
+extension UIScreen {
    static let screenWidth = UIScreen.main.bounds.size.width
    static let screenHeight = UIScreen.main.bounds.size.height
    static let screenSize = UIScreen.main.bounds.size
+}
+
+extension Image {
+    func defaultHeaderIcon() -> some View {
+        self.font(Font(.size22))
+            .foregroundColor(.black)
+    }
 }
 
 extension View {
