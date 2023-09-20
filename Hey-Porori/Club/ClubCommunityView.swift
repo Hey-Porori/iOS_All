@@ -35,7 +35,7 @@ struct ClubCommunityView: View {
     var dummyPostData: [ClubPostData] {
         var data: [ClubPostData] = []
         for i in 1...3 {
-            data.append(ClubPostData(id: 1, userID: "신사임당", clubID: 123, title: "이번 주 일요일 남한산성 등산 하실 분 모집해요", content: "안녕하세요 초보 등산러입니다.\n이번주 일요일(5월 28일) 남한산성 등산하실 분~\n산 타고 나서 점심 같이 먹고 헤어져요 ", isImportant: false, subject: .같이가요))
+            data.append(ClubPostData(id: i, userID: "신사임당", clubID: 123, title: "이번 주 일요일 남한산성 등산 하실 분 모집해요", content: "안녕하세요 초보 등산러입니다.\n이번주 일요일(5월 28일) 남한산성 등산하실 분~\n산 타고 나서 점심 같이 먹고 헤어져요 ", isImportant: false, subject: .같이가요))
         }
         return data
     }
@@ -73,12 +73,10 @@ struct ClubCommunityView: View {
                             clubPostBox(postData: data)
                         }
                     }
-                }.navigationDestination(for: ClubPostData.self, destination: { postData in
-                    // ClubPostDetailView(postData: postData)
-                })
+                }.navigationDestination(for: ClubPostData.self) { postData in
+                    ClubPostDetailView(clubData: clubData ,postData: postData)
+                }
             }.background(Color.subSkyBlue.opacity(0.1))
-            
-            Spacer()
         }.toolbar(.hidden)
     }
     

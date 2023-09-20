@@ -44,6 +44,7 @@
 		0EC1FD882AB6297500E7EEF3 /* TradeCreatePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC1FD872AB6297500E7EEF3 /* TradeCreatePostView.swift */; };
 		0ED6BBDF2AB99B1C000E5EBC /* ClubMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED6BBDE2AB99B1C000E5EBC /* ClubMainView.swift */; };
 		0ED6BBE12AB9BC3E000E5EBC /* ClubCommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED6BBE02AB9BC3E000E5EBC /* ClubCommunityView.swift */; };
+		0ED6BBE32ABB6384000E5EBC /* ClubPostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED6BBE22ABB6384000E5EBC /* ClubPostDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		0EC1FD872AB6297500E7EEF3 /* TradeCreatePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeCreatePostView.swift; sourceTree = "<group>"; };
 		0ED6BBDE2AB99B1C000E5EBC /* ClubMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubMainView.swift; sourceTree = "<group>"; };
 		0ED6BBE02AB9BC3E000E5EBC /* ClubCommunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubCommunityView.swift; sourceTree = "<group>"; };
+		0ED6BBE22ABB6384000E5EBC /* ClubPostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubPostDetailView.swift; sourceTree = "<group>"; };
 		0EE95D732A605940005B9E16 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		0EE95D752A60597D005B9E16 /* .pre-commit-config.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = ".pre-commit-config.yaml"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -223,6 +225,7 @@
 			children = (
 				0ED6BBDE2AB99B1C000E5EBC /* ClubMainView.swift */,
 				0ED6BBE02AB9BC3E000E5EBC /* ClubCommunityView.swift */,
+				0ED6BBE22ABB6384000E5EBC /* ClubPostDetailView.swift */,
 			);
 			path = Club;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				0ED6BBE12AB9BC3E000E5EBC /* ClubCommunityView.swift in Sources */,
 				0E8BF85D2A9B265000AAB263 /* JobCreatePostView.swift in Sources */,
 				0EC1FD862AB6198500E7EEF3 /* TradePostDetailView.swift in Sources */,
+				0ED6BBE32ABB6384000E5EBC /* ClubPostDetailView.swift in Sources */,
 				0E6AE2872A62DAEE008ADD83 /* CommunityMainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
