@@ -51,10 +51,8 @@ struct ClubMainView: View {
                             .foregroundColor(.black)
                     }.padding(.trailing, 20)
                 }
-            }
-            
-            Divider().padding(.top, 10)
-            
+            }.padding(.bottom, 10)
+                        
             ScrollView {
                 VStack {
                     ForEach(dummyClubData, id: \.self) { data in
