@@ -47,6 +47,7 @@
 		0ED6BBE32ABB6384000E5EBC /* ClubPostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED6BBE22ABB6384000E5EBC /* ClubPostDetailView.swift */; };
 		0ED6BBE52ABB7A59000E5EBC /* ClubExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED6BBE42ABB7A59000E5EBC /* ClubExploreView.swift */; };
 		0ED6BBE72ABB7EA3000E5EBC /* ClubDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED6BBE62ABB7EA3000E5EBC /* ClubDetailView.swift */; };
+		0ED6BBE92ABB8F38000E5EBC /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED6BBE82ABB8F38000E5EBC /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		0ED6BBE22ABB6384000E5EBC /* ClubPostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubPostDetailView.swift; sourceTree = "<group>"; };
 		0ED6BBE42ABB7A59000E5EBC /* ClubExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubExploreView.swift; sourceTree = "<group>"; };
 		0ED6BBE62ABB7EA3000E5EBC /* ClubDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubDetailView.swift; sourceTree = "<group>"; };
+		0ED6BBE82ABB8F38000E5EBC /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		0EE95D732A605940005B9E16 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		0EE95D752A60597D005B9E16 /* .pre-commit-config.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = ".pre-commit-config.yaml"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,13 +121,14 @@
 			path = Job;
 			sourceTree = "<group>";
 		};
-		0E2D67922AB5DDF0006CF89D /* API */ = {
+		0E2D67922AB5DDF0006CF89D /* Manager */ = {
 			isa = PBXGroup;
 			children = (
 				0E2D67932AB5DDF0006CF89D /* UserAPIManager.swift */,
 				0E2D67952AB5DDF0006CF89D /* APIURL.plist */,
+				0ED6BBE82ABB8F38000E5EBC /* LocationManager.swift */,
 			);
-			path = API;
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		0E2D67A22AB5DDF0006CF89D /* Observables */ = {
@@ -180,7 +183,7 @@
 				0ED6BBDD2AB99AAC000E5EBC /* Club */,
 				0EC1FD822AB5F47D00E7EEF3 /* Trade */,
 				0E2D67A22AB5DDF0006CF89D /* Observables */,
-				0E2D67922AB5DDF0006CF89D /* API */,
+				0E2D67922AB5DDF0006CF89D /* Manager */,
 				0E2D678C2AB5DDF0006CF89D /* Hey-Porori.entitlements */,
 				0EBE7D5F2A7C9BF200ACE2A1 /* Extensions */,
 				0E2220FB2A742740008083BD /* Job */,
@@ -346,6 +349,7 @@
 			files = (
 				0ED6BBE52ABB7A59000E5EBC /* ClubExploreView.swift in Sources */,
 				0E6AE2822A62D6BE008ADD83 /* Colors.swift in Sources */,
+				0ED6BBE92ABB8F38000E5EBC /* LocationManager.swift in Sources */,
 				0EC1FD882AB6297500E7EEF3 /* TradeCreatePostView.swift in Sources */,
 				0E2220FF2A7D7C98008083BD /* Components.swift in Sources */,
 				0EBE7D612A7C9C0000ACE2A1 /* TextExtension.swift in Sources */,
@@ -505,6 +509,7 @@
 				DEVELOPMENT_TEAM = PAQ92DM7XD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "게시글 작성, 커뮤니티 기능 등을 이용하기 위한 사용자 위치 정보를 받아옵니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -535,6 +540,7 @@
 				DEVELOPMENT_TEAM = PAQ92DM7XD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "게시글 작성, 커뮤니티 기능 등을 이용하기 위한 사용자 위치 정보를 받아옵니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
