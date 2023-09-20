@@ -46,6 +46,7 @@
 		0ED6BBE12AB9BC3E000E5EBC /* ClubCommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED6BBE02AB9BC3E000E5EBC /* ClubCommunityView.swift */; };
 		0ED6BBE32ABB6384000E5EBC /* ClubPostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED6BBE22ABB6384000E5EBC /* ClubPostDetailView.swift */; };
 		0ED6BBE52ABB7A59000E5EBC /* ClubExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED6BBE42ABB7A59000E5EBC /* ClubExploreView.swift */; };
+		0ED6BBE72ABB7EA3000E5EBC /* ClubDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED6BBE62ABB7EA3000E5EBC /* ClubDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		0ED6BBE02AB9BC3E000E5EBC /* ClubCommunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubCommunityView.swift; sourceTree = "<group>"; };
 		0ED6BBE22ABB6384000E5EBC /* ClubPostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubPostDetailView.swift; sourceTree = "<group>"; };
 		0ED6BBE42ABB7A59000E5EBC /* ClubExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubExploreView.swift; sourceTree = "<group>"; };
+		0ED6BBE62ABB7EA3000E5EBC /* ClubDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubDetailView.swift; sourceTree = "<group>"; };
 		0EE95D732A605940005B9E16 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		0EE95D752A60597D005B9E16 /* .pre-commit-config.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = ".pre-commit-config.yaml"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -229,6 +231,7 @@
 				0ED6BBE02AB9BC3E000E5EBC /* ClubCommunityView.swift */,
 				0ED6BBE22ABB6384000E5EBC /* ClubPostDetailView.swift */,
 				0ED6BBE42ABB7A59000E5EBC /* ClubExploreView.swift */,
+				0ED6BBE62ABB7EA3000E5EBC /* ClubDetailView.swift */,
 			);
 			path = Club;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				0E2D678E2AB5DDF0006CF89D /* LoginView.swift in Sources */,
 				0E6AE28D2A63D53B008ADD83 /* CommunityHotPostView.swift in Sources */,
 				0ED6BBDF2AB99B1C000E5EBC /* ClubMainView.swift in Sources */,
+				0ED6BBE72ABB7EA3000E5EBC /* ClubDetailView.swift in Sources */,
 				0E2D67982AB5DDF0006CF89D /* BundleExtension.swift in Sources */,
 				0E2220FD2A7D6F51008083BD /* JobMainView.swift in Sources */,
 				0E6AE28F2A6ABB7B008ADD83 /* CommunityMyPostView.swift in Sources */,

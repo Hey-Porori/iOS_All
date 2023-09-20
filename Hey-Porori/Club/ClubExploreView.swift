@@ -52,9 +52,9 @@ struct ClubExploreView: View {
                                 clubBox(data: data)
                             }
                         }
-                    }.navigationDestination(for: ClubData.self, destination: { clubData in
-                        ClubCommunityView(clubData: clubData)
-                    })
+                    }.navigationDestination(for: ClubData.self) { clubData in
+                        ClubDetailView(clubData: clubData)
+                    }
                     .padding(.top, 10)
                 }.padding(.horizontal, 20)
                     .background(Color.subSkyBlue.opacity(0.1))
