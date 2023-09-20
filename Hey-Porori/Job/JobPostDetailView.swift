@@ -59,7 +59,7 @@ struct JobPostDetailView: View {
                 Image("dummyImage")
                     .resizable()
                     .frame(height: 150)
-                    .background(Color.black)
+                    .background(Color.lightGray)
                     .padding(.vertical, 10)
                     .padding(.bottom, 10)
                 VStack {
@@ -81,7 +81,7 @@ struct JobPostDetailView: View {
                     Image("dummyImage")
                         .resizable()
                         .frame(width: 350, height: 180)
-                        .background(Color.black)
+                        .background(Color.lightGray)
                         .padding(.vertical, 10)
                 }.padding(.horizontal, 25)
             }

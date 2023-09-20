@@ -80,7 +80,7 @@ struct TradeMainView: View {
                                     Image("dummyImage")
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
-                                        .background(.blue)
+                                        .background(Color.lightGray)
                                         .clipShape(RoundedRectangle(cornerRadius: 15))
                                     HStack {
                                         Image(systemName: "heart.fill")

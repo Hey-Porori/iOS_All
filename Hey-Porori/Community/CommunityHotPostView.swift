@@ -31,7 +31,7 @@ func communityPostRow() -> some View {
         Image("dummyImage")
             .resizable()
             .frame(width: 75, height: 75)
-            .background(Color.black)
+            .background(Color.lightGray)
             .clipShape(RoundedRectangle(cornerRadius: 10))
         VStack(alignment: .leading) {
             Text("Lorem ipsum dolor amet consectetur.")
