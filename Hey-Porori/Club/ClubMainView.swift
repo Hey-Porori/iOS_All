@@ -25,6 +25,8 @@ struct ClubData: Identifiable, Hashable {
 }
 
 struct ClubMainView: View {
+    @Binding var isClubMainView: Bool
+    
     var dummyClubData: [ClubData] {
         var data: [ClubData] = []
         data.append(ClubData(id: 1, clubName: "산타는 할아버지", clubType: .등산, location: "서울시 송파구", currentMember: 8, maxMember: 10, mainPhotoURL: ""))
@@ -44,12 +46,12 @@ struct ClubMainView: View {
                 HStack {
                     Spacer()
                     Button {
-                        // TODO: 무슨버튼임?
+                        isClubMainView.toggle()
                     } label: {
                         Image(systemName: "square.grid.2x2")
                             .font(Font(.size22))
                             .foregroundColor(.black)
-                    }.padding(.trailing, 20)
+                    }.padding(.trailing, 20).padding(.top, 5)
                 }
             }.padding(.bottom, 10)
                         

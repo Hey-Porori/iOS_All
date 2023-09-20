@@ -45,6 +45,7 @@
 		0ED6BBDF2AB99B1C000E5EBC /* ClubMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED6BBDE2AB99B1C000E5EBC /* ClubMainView.swift */; };
 		0ED6BBE12AB9BC3E000E5EBC /* ClubCommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED6BBE02AB9BC3E000E5EBC /* ClubCommunityView.swift */; };
 		0ED6BBE32ABB6384000E5EBC /* ClubPostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED6BBE22ABB6384000E5EBC /* ClubPostDetailView.swift */; };
+		0ED6BBE52ABB7A59000E5EBC /* ClubExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED6BBE42ABB7A59000E5EBC /* ClubExploreView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		0ED6BBDE2AB99B1C000E5EBC /* ClubMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubMainView.swift; sourceTree = "<group>"; };
 		0ED6BBE02AB9BC3E000E5EBC /* ClubCommunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubCommunityView.swift; sourceTree = "<group>"; };
 		0ED6BBE22ABB6384000E5EBC /* ClubPostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubPostDetailView.swift; sourceTree = "<group>"; };
+		0ED6BBE42ABB7A59000E5EBC /* ClubExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubExploreView.swift; sourceTree = "<group>"; };
 		0EE95D732A605940005B9E16 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		0EE95D752A60597D005B9E16 /* .pre-commit-config.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = ".pre-commit-config.yaml"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -226,6 +228,7 @@
 				0ED6BBDE2AB99B1C000E5EBC /* ClubMainView.swift */,
 				0ED6BBE02AB9BC3E000E5EBC /* ClubCommunityView.swift */,
 				0ED6BBE22ABB6384000E5EBC /* ClubPostDetailView.swift */,
+				0ED6BBE42ABB7A59000E5EBC /* ClubExploreView.swift */,
 			);
 			path = Club;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ED6BBE52ABB7A59000E5EBC /* ClubExploreView.swift in Sources */,
 				0E6AE2822A62D6BE008ADD83 /* Colors.swift in Sources */,
 				0EC1FD882AB6297500E7EEF3 /* TradeCreatePostView.swift in Sources */,
 				0E2220FF2A7D7C98008083BD /* Components.swift in Sources */,

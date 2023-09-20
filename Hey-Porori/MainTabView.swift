@@ -13,13 +13,22 @@ struct MainTabView: View {
         UITabBar.appearance().isTranslucent = true
         UITabBar.appearance().backgroundColor = .white
     }
+    
+    // Club Main View / Club Explore View
+    @State var isClubMainView: Bool = true
+    
     var body: some View {
         NavigationStack {
             TabView {
-                ClubMainView()
-                    .tabItem {
+                if isClubMainView {
+                    ClubMainView(isClubMainView: $isClubMainView).tabItem {
                         Label("동호회", systemImage: "person.3.fill")
                     }
+                } else {
+                    ClubExploreView(isClubMainView: $isClubMainView).tabItem {
+                        Label("동호회", systemImage: "person.3.fill")
+                    }
+                }
                 TradeMainView()
                     .tabItem {
                         Label("중고거래", systemImage: "arrow.2.squarepath")
