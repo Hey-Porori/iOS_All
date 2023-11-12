@@ -82,7 +82,7 @@ func clubBox(data: ClubData) -> some View {
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 50, height: 50)
-                    .background(Color.red)
+                    .background(Color.lightGray)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                     .padding(.leading, 15)
                 VStack(alignment: .leading) {
