@@ -22,10 +22,10 @@ struct JobProfileView: View {
     // dummy data
     private var dummyList: [JobPostData] {
         var list = [JobPostData]()
-        for listID in 0..<5 {
-            let dummy = JobPostData(id: listID, title: "초중등 수학 파트선생님 모집", location: "현수학학원 (잠실동)", postTime: "14분 전", payPerTime: "14000", workTime: "월~금 | 09:00~18:00 협의")
-            list.append(dummy)
-        }
+        list.append(JobPostData(id: 1, title: "초중등 수학 파트선생님 모집", location: "현수학학원 (잠실동)", postTime: "14분 전", payPerTime: "14000", workTime: "월~금 | 09:00~18:00 협의", imageURL: "jobIcon1"))
+        list.append(JobPostData(id: 2, title: "위례일품양 점심 파트타임 모집", location: "하남시 위례대로 190", postTime: "2시간 전", payPerTime: "12000", workTime: "월~금 | 10:30~14:30", imageURL: "jobIcon1"))
+        list.append(JobPostData(id: 3, title: "세븐일레븐위례아이파크1호점 야간타임 알바 구함", location: "위례아이파크1차 상가E동", postTime: "3일 전", payPerTime: "15000", workTime: "화, 수, 토 | 22:00~07:00", imageURL: "jobIcon1"))
+        
         return list
     }
     
@@ -91,22 +91,41 @@ struct JobProfileView: View {
         return Button {
             지원서상태 = 상태
         } label: {
-            Text("\(상태.rawValue) 2").defaultStyle_customWeight(size: .size12, weight: .semibold)
-                .padding(.vertical, 7)
-                .padding(.horizontal, 10)
-                .background {
-                    if 지원서상태 == 상태 {
-                        RoundedRectangle(cornerRadius: 7)
-                            .fill(Color.dividerGray)
-                    } else {
-                        RoundedRectangle(cornerRadius: 7)
-                            .fill(Color.white)
-                    }
-                }.overlay(
-                    RoundedRectangle(cornerRadius: 5)
-                        .inset(by: 0.5)
-                        .stroke(Color.dividerGray, lineWidth: 1)
-                )
+            if 상태 == .응답대기 || 상태 == .전체 {
+                Text("\(상태.rawValue) 3").defaultStyle_customWeight(size: .size12, weight: .semibold)
+                    .padding(.vertical, 7)
+                    .padding(.horizontal, 10)
+                    .background {
+                        if 지원서상태 == 상태 {
+                            RoundedRectangle(cornerRadius: 7)
+                                .fill(Color.dividerGray)
+                        } else {
+                            RoundedRectangle(cornerRadius: 7)
+                                .fill(Color.white)
+                        }
+                    }.overlay(
+                        RoundedRectangle(cornerRadius: 5)
+                            .inset(by: 0.5)
+                            .stroke(Color.dividerGray, lineWidth: 1)
+                    )
+            } else {
+                Text("\(상태.rawValue) 0").defaultStyle_customWeight(size: .size12, weight: .semibold)
+                    .padding(.vertical, 7)
+                    .padding(.horizontal, 10)
+                    .background {
+                        if 지원서상태 == 상태 {
+                            RoundedRectangle(cornerRadius: 7)
+                                .fill(Color.dividerGray)
+                        } else {
+                            RoundedRectangle(cornerRadius: 7)
+                                .fill(Color.white)
+                        }
+                    }.overlay(
+                        RoundedRectangle(cornerRadius: 5)
+                            .inset(by: 0.5)
+                            .stroke(Color.dividerGray, lineWidth: 1)
+                    )
+            }
         }
     }
 }

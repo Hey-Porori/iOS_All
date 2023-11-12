@@ -29,15 +29,15 @@ struct JobPostDetailView: View {
             VStack(alignment: .leading, spacing: 5) {
                 HStack {
                     Image(systemName: "wonsign.circle").font(Font(.size20))
-                    Text("시급 12,000원").defaultStyle(size: .size16)
+                    Text("시급 \(postData.payPerTime)").defaultStyle(size: .size16)
                 }
                 HStack {
                     Image(systemName: "calendar").font(Font(.size20))
-                    Text("월~일").defaultStyle(size: .size16)
+                    Text("월~금").defaultStyle(size: .size16)
                 }
                 HStack {
                     Image(systemName: "clock").font(Font(.size20))
-                    Text("17:30~23:30").defaultStyle(size: .size16)
+                    Text("10:30~14:30").defaultStyle(size: .size16)
                 }
                 Spacer().frame(height: 15)
                 Text("초보도 가능할 정도로 일 쉽습니다!\n열정만 있다면 할 수 있습니다.").defaultStyle(size: .size16)
@@ -56,7 +56,7 @@ struct JobPostDetailView: View {
             }.padding(.vertical, 10)
             ScrollView {
                 // MARK: 메인 이미지
-                Image("dummyImage")
+                Image("\(postData.imageURL)")
                     .resizable()
                     .frame(height: 150)
                     .background(Color.lightGray)
@@ -68,7 +68,7 @@ struct JobPostDetailView: View {
                         VStack(alignment: .leading) {
                             Text("위례일품양 파트타임 모집").defaultStyle_Bold(size: .size20)
                             Spacer().frame(height: 10)
-                            Text("일품양 | 14분 전").defaultGrayStyle(size: .size17)
+                            Text("일품양 | \(postData.postTime)").defaultGrayStyle(size: .size17)
                         }
                         Spacer()
                         Image(systemName: "highlighter").font(Font(.size27))
@@ -78,7 +78,7 @@ struct JobPostDetailView: View {
                     // MARK: 알바 시급, 날짜, 시간 정보 표시
                     jobDetailView
                     // MARK: 지도(위치)
-                    Image("dummyImage")
+                    Image("jobMap1")
                         .resizable()
                         .frame(width: 350, height: 180)
                         .background(Color.lightGray)

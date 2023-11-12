@@ -19,6 +19,7 @@ struct TradePostData: Identifiable, Hashable {
     //    var updatedAt: Date
     //    var deletedAt: Date
     var state: String
+    var imageURL: String
 }
 
 struct TradeMainView: View {
@@ -77,16 +78,17 @@ struct TradeMainView: View {
                         ForEach(gridData, id: \.self) { data in
                             NavigationLink(value: data) {
                                 VStack {
-                                    Image("dummyImage")
+                                    Image(data.imageURL)
                                         .resizable()
-                                        .aspectRatio(contentMode: .fit)
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: 160, height: 160)
                                         .background(Color.lightGray)
                                         .clipShape(RoundedRectangle(cornerRadius: 15))
                                     HStack {
                                         Image(systemName: "heart.fill")
                                             .font(Font(.size16))
                                             .foregroundColor(.pink)
-                                        Text("12")
+                                        Text("\(data.recommend)")
                                             .foregroundColor(.pink)
                                             .defaultStyle_Bold(size: .size14)
                                         Spacer()
@@ -124,7 +126,12 @@ struct TradeMainView: View {
                 TradeCreatePostView(isPresentTradeCreatePostView: $isPresentTradeCreatePostView)
             }
         }.onAppear { //ZStack
-            gridData = Array(1...9).map { TradePostData(id: $0, userId: "jm10123@gmail.com", title: "닌텐도칩 팜 각 5.0", contents: "123", recommend: "13", state: "12") }
+//            gridData = Array(1...9).map { TradePostData(id: $0, userId: "jm10123@gmail.com", title: "닌텐도칩 팜 각 5.0", contents: "123", recommend: "13", state: "12") }
+            gridData.append(TradePostData(id: 1, userId: "jm10123@gmail.com", title: "닌텐도칩 팝니다 네고가능 각 5.0", contents: "123", recommend: "13", state: "12", imageURL: "tradeIcon1"))
+            gridData.append(TradePostData(id: 2, userId: "jm10123@gmail.com", title: "자전거 팔아용 17만 5천원", contents: "123", recommend: "5", state: "12", imageURL: "tradeIcon2"))
+            gridData.append(TradePostData(id: 3, userId: "jm10123@gmail.com", title: "조립컴퓨터 125에 급처합니다 사양 글 확인", contents: "123", recommend: "7", state: "12", imageURL: "tradeIcon3"))
+            gridData.append(TradePostData(id: 4, userId: "jm10123@gmail.com", title: "황올 + 콜라 깊티 1.7에 급처해요", contents: "123", recommend: "2", state: "12", imageURL: "tradeIcon4"))
+            gridData.append(TradePostData(id: 5, userId: "jm10123@gmail.com", title: "아이패드 M1 프로 팝니다 네고가능 선제", contents: "123", recommend: "8", state: "12", imageURL: "tradeIcon5"))
         }
     }
 }

@@ -13,6 +13,7 @@ struct ClubCommentData: Identifiable, Hashable {
     var userPhotoURL: String
     var userName: String
     var commentText: String
+    var commentdate: Int
 }
 
 struct ClubPostDetailView: View {
@@ -21,9 +22,9 @@ struct ClubPostDetailView: View {
     
     var dummyComments: [ClubCommentData] {
         var data: [ClubCommentData] = []
-        for i in 1...5 {
-            data.append(ClubCommentData(id: i, userPhotoURL: "", userName: "김아현", commentText: "산 조치요~ 횐님도 건강하십쇼~!"))
-        }
+        data.append(ClubCommentData(id: 1, userPhotoURL: "clubUser1", userName: "마법소녀김아현", commentText: "에이 그거보단 요즘 새로나온 i-지팡이 14 Pro Max가 낫죠", commentdate: 5))
+        data.append(ClubCommentData(id: 2, userPhotoURL: "clubUser2", userName: "맛세이장인김예지", commentText: "무슨 애플이에요;; 갤럭시 지팡이가 최고지;;", commentdate: 12))
+        data.append(ClubCommentData(id: 3, userPhotoURL: "clubUser3", userName: "소녀가장정지윤", commentText: "ㅋㅋ 다들 지팡이알못이네 요즘은 화웨이 지팡이가 짱임;", commentdate: 23))
         
         return data
     }
@@ -47,7 +48,7 @@ struct ClubPostDetailView: View {
                             .padding(.bottom, 4)
                         Text("\(postData.content)")
                             .defaultStyle(size: .size15)
-                        Text("\(postData.userID) · 3분 전")
+                        Text("\(postData.userID) · \(postData.postDate)시간 전")
                             .defaultGrayStyle(size: .size14)
                             .padding(.top, 5)
                             .multilineTextAlignment(.leading)
@@ -77,7 +78,7 @@ struct ClubPostDetailView: View {
     private func clubPostCommentBox(commentData: ClubCommentData) -> some View {
         ZStack(alignment: .topTrailing) {
             HStack {
-                Image("dummyImage")
+                Image("\(commentData.userPhotoURL)")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 35, height: 35)
@@ -97,7 +98,7 @@ struct ClubPostDetailView: View {
                 }.padding(.vertical, 10)
                 Spacer()
             }
-            Text("1시간 전")
+            Text("\(commentData.commentdate)분 전")
                 .foregroundColor(.lightGray)
                 .defaultStyle(size: .size14)
                 .padding(10)

@@ -29,9 +29,9 @@ struct ClubMainView: View {
     
     var dummyClubData: [ClubData] {
         var data: [ClubData] = []
-        data.append(ClubData(id: 1, clubName: "산타는 할아버지", clubType: .등산, location: "서울시 송파구", currentMember: 8, maxMember: 10, mainPhotoURL: ""))
-        data.append(ClubData(id: 2, clubName: "커피 한 잔의 여유와 독서", clubType: .독서, location: "서울시 중구", currentMember: 6, maxMember: 10, mainPhotoURL: ""))
-        data.append(ClubData(id: 3, clubName: "맛따라 멋따라", clubType: .맛집, location: "서울시 마포구", currentMember: 13, maxMember: 15, mainPhotoURL: ""))
+        data.append(ClubData(id: 1, clubName: "산타는 할아버지", clubType: .등산, location: "서울시 송파구", currentMember: 8, maxMember: 10, mainPhotoURL: "clubIcon1"))
+        data.append(ClubData(id: 2, clubName: "커피 한 잔의 여유와 독서", clubType: .독서, location: "서울시 중구", currentMember: 6, maxMember: 10, mainPhotoURL: "clubIcon2"))
+        data.append(ClubData(id: 3, clubName: "맛따라 멋따라", clubType: .맛집, location: "서울시 마포구", currentMember: 13, maxMember: 15, mainPhotoURL: "clubIcon3"))
         return data
     }
     
@@ -78,7 +78,7 @@ func clubBox(data: ClubData) -> some View {
         ZStack(alignment: .bottomTrailing) {
             HStack {
                 // TODO: Image URL Loading 방식으로 변경
-                Image("dummyImage")
+                Image(data.mainPhotoURL)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 50, height: 50)

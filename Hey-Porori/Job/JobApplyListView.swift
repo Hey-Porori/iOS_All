@@ -25,10 +25,9 @@ struct JobApplyListView: View {
     // dummy data
     private var dummyList: [JobApplyData] {
         var list = [JobApplyData]()
-        for listID in 0..<5 {
-            let dummy = JobApplyData(id: listID, postID: listID, name: "김민수", phone: "010-1234-5678", isMale: false, age: 24, location: "창곡동")
-            list.append(dummy)
-        }
+        list.append(JobApplyData(id: 1, postID: 1, name: "김민수", phone: "010-1234-5678", isMale: false, age: 24, location: "창곡동"))
+        list.append(JobApplyData(id: 2, postID: 2, name: "이재원", phone: "010-1424-1245", isMale: true, age: 23, location: "홍제동"))
+        list.append(JobApplyData(id: 3, postID: 3, name: "정지윤", phone: "010-6432-5262", isMale: false, age: 23, location: "필동"))
         return list
     }
     

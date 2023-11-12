@@ -11,15 +11,15 @@ struct CommunityMyPostView: View {
     var body: some View {
         ScrollView {
             VStack {
-                communityPostRow()
-                communityPostRow()
-                communityPostRow()
-                communityPostRow()
-                communityPostRow()
-                communityPostRow()
-                communityPostRow()
-                communityPostRow()
-                communityPostRow()
+//                communityPostRow()
+//                communityPostRow()
+//                communityPostRow()
+//                communityPostRow()
+//                communityPostRow()
+//                communityPostRow()
+//                communityPostRow()
+//                communityPostRow()
+//                communityPostRow()
                 Spacer()
             }
         }

@@ -18,7 +18,7 @@ struct TradePostDetailView: View {
             
             ScrollView(showsIndicators: false) {
                 VStack {
-                    Image("dummyImage")
+                    Image("\(postData.imageURL)")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .background(Color.blue)
@@ -29,13 +29,13 @@ struct TradePostDetailView: View {
                             .font(Font(.size16))
                             .foregroundColor(.pink)
                             .padding(.trailing, -3)
-                        Text("12")
+                        Text("\(postData.recommend)")
                             .foregroundColor(.pink)
                             .defaultStyle_Bold(size: .size14)
                         Text("김포아지매")
                             .defaultGrayStyle_Bold(size: .size16)
                         Spacer()
-                        Text("2023.05.21")
+                        Text("2023.11.08")
                             .defaultGrayStyle(size: .size14)
                         Text("필동")
                             .foregroundColor(.white)
@@ -54,7 +54,7 @@ struct TradePostDetailView: View {
                             .padding(.bottom, 5)
                         Spacer()
                     }
-                    Text("없으면 하였으며, 풀밭에 곳으로 평화스러운 피고 찾아다녀도, 현저하게 찬미를 아름다우냐? 무엇을 심장은 피가 인생에 것이다. 하여도 얼음이 거친 따뜻한 과실이 광야에서 것이다. 않는 능히 이상의 가슴에 장식하는 뜨거운지라, 부패뿐이다. 때에, 청춘의 새가 갑 귀는 않는 철환하였는가? 크고 그들에게 동력은 할지라도 꽃이 사막이다. 뭇 소금이라 너의 많이 노래하며 그림자는 얼마나 가장 열락의 말이다. 이상을 이상 보는 말이다. 유소년에게서 그들의 피고, 철환하였는가?  산야에 칼이다.  풀밭에 인간은 싶이 보라. 우리의 힘차게 이상은 청춘 평화스러운 얼마나")
+                    Text("플레이하고 나서 바로 되파는 거라 흠집 같은 건 별로 없을 거에요.\n젤다 야숨은 5.5, 브릴리언트 다이아몬드는 4.5에 판매합니다.\n나머지 동숲 등등은 5.0입니다.")
                         .defaultGrayStyle(size: .size18)
                         .padding(.bottom, 20)
                     
